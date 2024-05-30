@@ -1,0 +1,97 @@
+{
+    outline: 2px solid red;
+}
+body{
+    justify-items: center;
+    user-select: none;  /* Standard */
+}
+.calendar{
+    width:280px;
+    border-bottom: 1px solid dimgray;
+    /*border-radius: 10px;*/
+}
+.header{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: "Century Schoolbook";
+    width: 100%;
+    height: 65px;
+    border-top: 1px solid dimgray;
+    border-bottom: 1px solid dimgray;
+    background: linear-gradient(45deg, white, Floralwhite,white);
+}
+#prev, #next{
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+    background-color: white;
+    user-select: none;
+}
+#prev:hover, #next:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+#prev{
+    position: relative;
+    left: 10px;
+    top: 17px;
+    height: 30px;
+}
+#next{
+    position: relative;
+    top: 17px;
+    right: 10px;
+    height: 30px;
+}
+.currentMonth{
+    display: flex;
+    justify-content: center;
+}
+#month-year{
+    padding-top: 3px;
+    font-size: 20px;
+}
+.Dates{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+}
+.ROW1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: #A91B0D;
+}
+.ROW{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.COLUMN1{
+    width: 30px;
+    height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    font-family: Calibri;
+}
+.COLUMN{
+    width: 25px;
+    height: 25px;
+    border-radius: 9px;
+    border: none;
+    font-weight: bold;
+    font-size: 12.5px;
+    background-color: white;
+}
+.COLUMN:hover{
+    cursor: pointer;
+}
+#month-year:hover, .ROW1:hover{
+    cursor: default;
+}
