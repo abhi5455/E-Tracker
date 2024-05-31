@@ -8,10 +8,13 @@ let prevClickDate=document.getElementById('1');
 let headerMonth=dateUpdate.textContent.split(" ")[0];
 let headerYear=dateUpdate.textContent.split(", ")[1];
 
-today=new Date();
-currentYear=today.getFullYear();
-currentMonth=today.getMonth()+1;
-currentday=today.getDate();
+let today=new Date();
+let currentYear=today.getFullYear();
+let currentMonth=today.getMonth()+1;
+let currentday=today.getDate();
+const monthSequence=['','JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];
+let userSelectDate=currentday.toString()+" "+monthSequence[currentMonth]+" "+currentYear.toString();
+
 window.addEventListener('load',function () {
     dateUpdate.textContent = monthSequence[currentMonth]+" "+currentday+", "+currentYear.toString();
     headerMonth=dateUpdate.textContent.split(" ")[0];
@@ -41,12 +44,10 @@ document.getElementById('todayTag').addEventListener('click', function(){
 
 let header=document.getElementById('month-year');
 function setDate(currentMonth, currentYear){
-    console.log("ByMain "+currentMonth, currentYear);
 
     let column = zellersCongruence(1,currentMonth, currentYear);
 
     let day = column===0?7:column;
-    console.log("first day "+day);
     for (let i=1;i<=42;i++){
         document.getElementById(i.toString()).textContent="";
         document.getElementById(i.toString()).addEventListener('mouseenter',function(){
@@ -55,7 +56,6 @@ function setDate(currentMonth, currentYear){
     }
     let limit=daySequence[currentMonth];
     if(((currentYear % 4 === 0 && currentYear % 100 !== 0) || (currentYear % 400 === 0)) && currentMonth===2){
-        console.log(currentMonth);
         limit=29;
     }
     for(let i=1;i<=limit;i++)
@@ -91,7 +91,6 @@ function setDate(currentMonth, currentYear){
     header.textContent=currentYear.toString()+" "+monthSequence[currentMonth];
     calendarYear=currentYear;
     calendarMonth=monthSequence[currentMonth];
-    console.log(calendarYear+calendarMonth);
 }
 function zellersCongruence(day,month,year){
     if(month<3){
@@ -106,7 +105,6 @@ function zellersCongruence(day,month,year){
 }
 
 //changing Calendar when left or right arrow is clicked
-const monthSequence=['','JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];
 const daySequence=[0,31,28,31,30,31,30,31,31,30,31,30,31]
 let calendarPrev=document.getElementById('prev');
 let calendarNext=document.getElementById('next');
@@ -165,7 +163,7 @@ function changeCalendarRight(){
 }
 
 //On Date Click
-dateNumbers=document.getElementsByClassName("COLUMN");
+let dateNumbers=document.getElementsByClassName("COLUMN");
 for(let i=1;i<=dateNumbers.length;i++){
     dateNumbers[i].addEventListener('click',dateNumbersClick);
 }
@@ -175,6 +173,8 @@ function dateNumbersClick(){
         return;
     }
     let str= calendarMonth+" "+clickedElement.textContent+", "+calendarYear.toString();
+    userSelectDate=clickedElement.textContent+" "+calendarMonth+" "+calendarYear.toString();
+    console.log("UserSelectDate " + userSelectDate);
     dateUpdate.textContent=str;
     headerMonth=dateUpdate.textContent.split(" ")[0];
     headerYear=dateUpdate.textContent.split(", ")[1];
@@ -183,5 +183,4 @@ function dateNumbersClick(){
     if(prevClickDate!==currentClickDate)
         prevClickDate.style.backgroundColor="white";
     prevClickDate=document.getElementById(clickedElement.id);
-    console.log(str);
 }
