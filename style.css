@@ -74,6 +74,7 @@ header{
     width: 160px;
     color: white;
     padding: 2px;
+    box-shadow: 1px 2.5px 4px dimgrey;
 }
 .calculateExpense:hover{
     cursor: pointer;
