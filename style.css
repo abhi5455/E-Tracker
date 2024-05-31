@@ -24,11 +24,15 @@ header{
 }
 .todayTag{
     position: absolute;
-    left: 105px;
-    background-color: #1F75FE;
-    color: white;
+    left: 110px;
+    background-color: lightgray;
+    color: dimgrey;
+    font-family: Calibri;
+    font-weight: bold;
     padding: 11px;
-    border-radius: 10px;
+    border-radius: 15px;
+    /*background-color: white;
+    outline: 1px solid grey;*/
 }
 .todayTag:hover{
     cursor: pointer;
@@ -37,7 +41,7 @@ header{
 }
 .DateUpdate{
     position: absolute;
-    left: 310px;
+    left: 320px;
     font-family: Calibri;
     font-size: 21px;
 }
@@ -46,9 +50,61 @@ header{
     flex-direction: row;
 }
 .container1{
-    width: 280px;
+    width: 301px;
     height: 89.8vh;
     background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.calendar{
+    position: absolute;
+    left: 10px;
+}
+.calculateExpense{
+    position: absolute;
+    top: 410px;
+    background: linear-gradient(45deg, #00BFFF, #007FFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-family: Calibri;
+    font-size: 17px;
+    font-weight: bold;
+    width: 160px;
+    color: white;
+    padding: 2px;
+}
+.calculateExpense:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+#calculateExpenseImg{
+    width: 50px;
+    height: 46px;
+}
+#showEstimate{
+    position: absolute;
+    top: 481px;
+    width: 250px;
+    height: auto;
+    min-height: 150px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, floralwhite,white, floralwhite);
+    h4{
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    h3{
+        display: flex;
+        justify-content: center;
+    }
+    #totalExpense{
+        position: relative;
+        top: 4px;
+        color: red;
+    }
+    display: none;
 }
 .container2{
     display: flex;
@@ -64,7 +120,7 @@ header{
     border-radius: 10px;
     align-content: center;
     background-color: ghostwhite;
-    opacity: 0.7;
+    opacity: 0.8;
     box-shadow: 0 4px 10px rgba(0.2,0,0,0.4);
     overflow: auto;
     font-family: "Arial";
