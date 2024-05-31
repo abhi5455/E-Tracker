@@ -9,9 +9,13 @@
 <body>
     <header>
         <img src="threelines.png" alt="threelines" class="threeLines" id="threelines">
-        <img src="personInfo.png" alt="Info" class="InfoIcon">
+        <img src="personInfo.png" alt="personInfo" class="personInfo">
         <div class="todayTag" id="todayTag">TODAY</div>
         <div class="DateUpdate" id="Date">SEPTEMBER 30, 2024</div>
+        <div id="infoBlock">
+            <p id="infoMsg">Track your Expense: <br>▪️ Set the date in the Calendar <br>▪️ Add new Expense<br>▪️ Compute Expense</p>
+            <img src="info.png" alt="info" class="info">
+        </div>
     </header>
     <div class="box">
         <div class="container1">
@@ -203,10 +207,16 @@
             </div>
         </div>
         <div class="container2" id="container2">
-            <div class="expense"> FOOD EXPENSE</div>
-            <div class="expense"></div>
-            <div class="expense"></div>
-
+            <div class="expense" id="expenseMsg">
+                <div class="labels">
+                    <h5>ExpenseName:</h5>
+                    <h5>Amount:</h5>
+                </div>
+                <div class="labelValue">
+                    <label id="label1" class="label11">Food</label>
+                    <label id="label2" class="label12">₹ 500</label>
+                </div>
+            </div>
         </div>
     </div>
     <script src="scriptCalendar.js"></script>
