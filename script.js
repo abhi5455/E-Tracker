@@ -25,6 +25,18 @@ function addExpense(){
     container2.appendChild(newExpense);
 }
 
+let info=document.getElementById('infoBlock');
+info.addEventListener('mouseenter',function(){
+    document.body.style.backgroundColor="dimgray";
+    container2.style.opacity=".7";
+});
+info.addEventListener('mouseleave',function(){
+    document.body.style.backgroundColor="white";
+    container2.style.opacity="1";
+});
+
+
+
 let threelines=document.getElementById('threelines');
 threelines.addEventListener('click', function(){
     let container2=document.getElementById('container2');
