@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        {
+            outline: 2px solid red;
+        }
+        body{
+            padding-left:30px;
+            padding-right:30px;
+            height: 524px;
+            background: linear-gradient(45deg, aqua,hotpink);
+        }
+        .maindiv{
+            display:flex;
+            flex-direction: column;
+        }
+        .section{
+            display: flex;
+            flex-direction: column;
+            height: 140px;
+        }
+        label{
+            display: flex;
+            align-items: center;
+            height: 50px;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: x-large;
+            padding-left: 10px;
+            font-family: Calibri;
+            color: black;
+        }
+        input{
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            border-radius: 10px;
+            background-color: floralwhite;
+            border: none;
+            font-size: large;
+            padding-left: 10px;
+            outline: 1px solid black;
+            opacity: .8;
+        }
+        textarea{
+            display: flex;
+            flex-grow: 1;
+            align-content: center;
+            border-radius: 10px;
+            background-color: floralwhite;
+            opacity: .8;
+            border: none;
+            font-size: large;
+            padding: 10px;
+            font-family: Arial;
+            outline: 1px solid black;
+        }
+        input::placeholder, textarea::placeholder{
+            font-weight: bold;
+            color: darkgray;
+        }
+        textarea::placeholder{
+            position: relative;
+            font-size: large;
+        }
+        #buttons{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 30px;
+            height: 40px;
+        }
+        #ok{
+            border: none;
+            border-radius: 10px;
+            width: 100px;
+            margin-right: 20px;
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            font-size: large;
+        }
+        #cancel{
+            border: none;
+            border-radius: 10px;
+            width: 100px;
+            color: blue;
+            font-weight: bold;
+            font-size: large;
+        }
+        #ok:hover, #cancel:hover{
+            cursor: pointer;
+            transform: scale(1.08);
+        }
+        p{
+            position: absolute;
+            top:175px;
+            left: 250px;
+            color: red;
+            font-family: Arial;
+            font-size: small;
+            font-weight: bold;
+            display: none;
+        }
+        #alertDate{
+            position: absolute;
+            right: 40px;
+            bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+  <div class="maindiv">
+    <div class="section">
+        <label for="name">Expense NameId: </label>
+        <input type="text" id="name" placeholder="Enter Expense Name, eg: FoodExpense">
+    </div>
+    <div class="section">
+        <label for="amount">Expense Amount:</label>
+        <input type="text" id="amount" placeholder="Enter Amount, eg: 1000">
+    </div>
+    <div class="section">
+        <label for="description">Description:</label>
+        <textarea id="description" placeholder="eg: Spent during Dinner with Friends"></textarea>
+    </div>
+      <div id="buttons">
+          <button id="ok">OK</button>
+          <button id="cancel">Cancel</button>
+      </div>
+      <p id="error">Enter a Valid Amount</p>
+      <h5 id="alertDate">SEPTEMBER 10, 2024</h5>
+  </div>
+  <script>
+      let amount=document.getElementById('amount');
+      amount.addEventListener('input',function(){
+          let text=amount.value;
+          let x=/^\d+(\.\d+)?$/.test(text);
+          let error=document.getElementById('error')
+          if(!x && text!==""){
+              error.style.display="block";
+          }
+          else
+              error.style.display="none";
+      });
+  </script>
+</body>
+</html>
