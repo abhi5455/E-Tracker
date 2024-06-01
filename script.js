@@ -15,8 +15,6 @@ compute.addEventListener('click',function(){
     showEstimate.style.display="block";
     console.log(userSelectDate);
 
-    addExpense();
-
 })
 
 function addExpense(){
@@ -24,7 +22,7 @@ function addExpense(){
     let newExpense=expense.cloneNode(true);
     newExpense.style.display="flex";
     let lastElement=document.getElementById('addNew');
-    newExpense.id="expense";
+    /*Need to edit*/newExpense.id="expense";
     container2.insertBefore(newExpense,lastElement);
 }
 
@@ -81,11 +79,31 @@ function openPopup() {
     newFrame.style.top =  '100px';
     newFrame.style.borderRadius = '40px';
     newFrame.style.border = 'none';
+
     document.body.appendChild(newFrame);
+
     newFrame.onload = function() {
         const newFrameDocument = newFrame.contentDocument || newFrame.contentWindow.document;
         let alertDate = newFrameDocument.getElementById('alertDate');
         alertDate.textContent = alertDateFormat;
+        let okButton=newFrameDocument.getElementById('ok');
+        let cancelButton=newFrameDocument.getElementById('cancel');
+        okButton.addEventListener('click', function(){
+            console.log("esdtrgh");
+            addExpense();
+            revertBody();
+            document.body.removeChild(newFrame);
+        })
+        cancelButton.addEventListener('click', function(){
+            revertBody();
+            document.body.removeChild(newFrame);
+        })
     }
-    // Add the frame to the document body
+}
+function revertBody(){
+    document.body.style.backgroundColor="white";
+    container2.style.opacity="1";
+    container1.style.opacity="1";
+    mainHeader.style.opacity="1";
+    mainHeader.style.outline="1px solid lightgrey";
 }
