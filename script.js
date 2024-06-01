@@ -31,7 +31,6 @@ plusButton.addEventListener('click',function(){
 
     openPopup();
 })
-openPopup();
 
 
 //setting info icon
@@ -72,9 +71,12 @@ function openPopup() {
     var newFrame = document.createElement('iframe');
     newFrame.src = 'CalcExpense.html';
     newFrame.width = '700px';
+    newFrame.width = '45%';
     newFrame.height = '540';
     newFrame.style.position = 'absolute';
-    newFrame.style.left = '550px';
+    newFrame.style.right = '18vw';
+
+    console.log(container2.offsetWidth);
     newFrame.style.top =  '100px';
     newFrame.style.borderRadius = '40px';
     newFrame.style.border = 'none';
@@ -97,6 +99,7 @@ function openPopup() {
             revertBody();
             document.body.removeChild(newFrame);
         })
+
     }
 }
 function revertBody(){
