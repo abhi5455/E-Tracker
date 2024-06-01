@@ -166,6 +166,10 @@ function openPopup(nameId, amountExpense, description,flag) {
             newFrameDocument.getElementById('ok').style.display='none';
             newFrameDocument.getElementById('cancel').style.display='none';
             newFrameDocument.getElementById('okCancel').style.display='block';
+            /*let popuplabels=newFrameDocument.getElementsByClassName('popUplabel');
+            for(let i=0;i<popuplabels.length;i++){
+                popuplabels[i].style.color='dimgrey';
+            }*/
             newFrameDocument.body.style.pointerEvents="none";
             okCancelButton.style.pointerEvents="auto";
             okCancelButton.addEventListener('click', function(){
