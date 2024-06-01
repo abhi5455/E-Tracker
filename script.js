@@ -171,6 +171,7 @@ function openPopup(nameId, amountExpense, description,flag) {
                 popuplabels[i].style.color='dimgrey';
             }*/
             newFrameDocument.body.style.pointerEvents="none";
+            newFrameDocument.body.style.background='linear-gradient(45deg, #00BFFF, lightgreen)';
             okCancelButton.style.pointerEvents="auto";
             okCancelButton.addEventListener('click', function(){
                 revertBody();
