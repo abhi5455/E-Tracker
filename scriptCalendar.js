@@ -14,6 +14,7 @@ let currentMonth=today.getMonth()+1;
 let currentday=today.getDate();
 const monthSequence=['','JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];
 let userSelectDate=currentday.toString()+" "+monthSequence[currentMonth]+" "+currentYear.toString();
+let alertDateFormat=monthSequence[currentMonth]+" "+currentday.toString()+", "+currentYear.toString();
 
 window.addEventListener('load',function () {
     dateUpdate.textContent = monthSequence[currentMonth]+" "+currentday+", "+currentYear.toString();
@@ -173,6 +174,7 @@ function dateNumbersClick(){
         return;
     }
     let str= calendarMonth+" "+clickedElement.textContent+", "+calendarYear.toString();
+    alertDateFormat=str;
     userSelectDate=clickedElement.textContent+" "+calendarMonth+" "+calendarYear.toString();
     console.log("UserSelectDate " + userSelectDate);
     dateUpdate.textContent=str;

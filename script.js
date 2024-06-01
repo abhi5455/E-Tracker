@@ -4,6 +4,8 @@ let to=document.getElementById('to');
 let days=document.getElementById('days');
 let expenses=document.getElementById('expense');
 let container2=document.getElementById('container2');
+let container1=document.getElementById('container1');
+let mainHeader=document.getElementById('mainHeader');
 
 let showEstimate=document.getElementById('showEstimate');
 compute.addEventListener('click',function(){
@@ -15,7 +17,6 @@ compute.addEventListener('click',function(){
 
     addExpense();
 
-    openPopup();
 })
 
 function addExpense(){
@@ -27,6 +28,14 @@ function addExpense(){
     container2.insertBefore(newExpense,lastElement);
 }
 
+let plusButton=document.getElementById('plus');
+plusButton.addEventListener('click',function(){
+
+    openPopup();
+})
+
+
+//setting info icon
 let info=document.getElementById('infoBlock');
 info.addEventListener('mouseenter',function(){
     document.body.style.backgroundColor="dimgray";
@@ -36,7 +45,7 @@ info.addEventListener('mouseleave',function(){
     document.body.style.backgroundColor="white";
     container2.style.opacity="1";
 });
-
+//
 
 
 let threelines=document.getElementById('threelines');
@@ -46,25 +55,37 @@ threelines.addEventListener('click', function(){
 })
 
 function openPopup() {
+    document.body.style.backgroundColor="black";
+    container2.style.opacity=".6";
+    container1.style.opacity=".6";
+    mainHeader.style.opacity=".6";
+    mainHeader.style.outline="none";
+
     // Calculate the center position of the old window
     var centerX = window.screenX + (window.innerWidth / 2);
     var centerY = window.screenY + (window.innerHeight / 2);
 
     // Calculate the position of the new frame to center it relative to the old window
     var newFrameWidth = 400;
-    var newFrameHeight = 400;
+    var newFrameHeight = 540;
     var newX = centerX - (newFrameWidth / 2);
     var newY = centerY - (newFrameHeight / 2);
 
     // Create a new frame element
     var newFrame = document.createElement('iframe');
     newFrame.src = 'CalcExpense.html';
-    newFrame.width = newFrameWidth;
+    newFrame.width = '700px';
     newFrame.height = newFrameHeight;
     newFrame.style.position = 'absolute';
-    newFrame.style.left = '10px';
-    newFrame.style.top =  '20px';
-
+    newFrame.style.left = '550px';
+    newFrame.style.top =  '100px';
+    newFrame.style.borderRadius = '40px';
+    newFrame.style.border = 'none';
+    document.body.appendChild(newFrame);
+    newFrame.onload = function() {
+        const newFrameDocument = newFrame.contentDocument || newFrame.contentWindow.document;
+        let alertDate = newFrameDocument.getElementById('alertDate');
+        alertDate.textContent = alertDateFormat;
+    }
     // Add the frame to the document body
-    //document.body.appendChild(newFrame);
 }
