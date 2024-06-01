@@ -31,6 +31,7 @@ plusButton.addEventListener('click',function(){
 
     openPopup();
 })
+openPopup();
 
 
 //setting info icon
@@ -58,22 +59,20 @@ function openPopup() {
     container1.style.opacity=".6";
     mainHeader.style.opacity=".6";
     mainHeader.style.outline="none";
+    mainHeader.style.pointerEvents="none";
+    container1.style.pointerEvents="none";
+    container2.style.pointerEvents="none";
 
     // Calculate the center position of the old window
     var centerX = window.screenX + (window.innerWidth / 2);
     var centerY = window.screenY + (window.innerHeight / 2);
 
-    // Calculate the position of the new frame to center it relative to the old window
-    var newFrameWidth = 400;
-    var newFrameHeight = 540;
-    var newX = centerX - (newFrameWidth / 2);
-    var newY = centerY - (newFrameHeight / 2);
 
     // Create a new frame element
     var newFrame = document.createElement('iframe');
     newFrame.src = 'CalcExpense.html';
     newFrame.width = '700px';
-    newFrame.height = newFrameHeight;
+    newFrame.height = '540';
     newFrame.style.position = 'absolute';
     newFrame.style.left = '550px';
     newFrame.style.top =  '100px';
@@ -106,4 +105,7 @@ function revertBody(){
     container1.style.opacity="1";
     mainHeader.style.opacity="1";
     mainHeader.style.outline="1px solid lightgrey";
+    mainHeader.style.pointerEvents="auto";
+    container1.style.pointerEvents="auto";
+    container2.style.pointerEvents="auto";
 }
