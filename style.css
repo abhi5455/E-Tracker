@@ -162,50 +162,25 @@ header{
         border-radius: 5px;
         opacity: .6;
     }
+    display: none;
 }
 .addNew {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 350px;
-    font-weight: bold;
-    font-family: "Arial";
-    font-size: large;
-    border-radius: 40px;
-    height: 100px;
-    position: relative;
-    margin: 0 auto;
     margin-top: 10px;
-    z-index: 1;
-    padding-top: 25px;
-    overflow: hidden;
-}
-.addNew::before {
-    content: '';
-    opacity: 0; /* Trans /* Match the border-radius of .addNew */
-    z-index: -1; /* Place it behind the .addNew content */
-}
-.addNew h4{
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    z-index: 2;
-    opacity: 1;
-    background-color: white;
-    color: grey;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 #plus{
     width: 50px;
-    height: 70px;
+    height: 48px;
     position: relative;
-    top: -50px;
-    border-radius: 30px;
+    border-radius: 20px;
     z-index: 3;
-
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+#plus:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0ms;
 }
 .labelValue{
     display: flex;

@@ -21,8 +21,10 @@ compute.addEventListener('click',function(){
 function addExpense(){
     let expense=document.getElementById('expenseMsg');
     let newExpense=expense.cloneNode(true);
+    newExpense.style.display="flex";
+    let lastElement=document.getElementById('addNew');
     newExpense.id="expense";
-    container2.appendChild(newExpense);
+    container2.insertBefore(newExpense,lastElement);
 }
 
 let info=document.getElementById('infoBlock');
