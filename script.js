@@ -32,7 +32,7 @@ function addExpense(name,amount,description){
     let lastElement=document.getElementById('addNew');
     /*Need to edit*/newExpense.id="expense";
     newExpense.querySelector('#label1').textContent=name;
-    newExpense.querySelector('#label2').textContent=amount;
+    newExpense.querySelector('#label2').textContent="₹"+amount;
     newExpense.querySelector('#label3').textContent=description;
     container2.insertBefore(newExpense,lastElement);
     let expenses=document.getElementsByClassName('expense');
@@ -167,11 +167,11 @@ function openPopup(nameId, amountExpense, description,flag) {
             newFrameDocument.getElementById('cancel').style.display='none';
             newFrameDocument.getElementById('okCancel').style.display='block';
             let popuplabels=newFrameDocument.getElementsByClassName('popUplabel');
-            for(let i=0;i<popuplabels.length;i++) {
-                popuplabels[i].style.color = '#333333';
-            }
+            for(let i=0;i<popuplabels.length;i++){
+                popuplabels[i].style.color='#333333';
+}
             newFrameDocument.body.style.pointerEvents="none";
-            newFrameDocument.body.style.background='linear-gradient(45deg, #00BFFF, #007FFF)';
+            newFrameDocument.body.style.background='linear-gradient(45deg, aqua,hotpink)';
             okCancelButton.style.pointerEvents="auto";
             newFrameDocument.getElementById('description').style.pointerEvents="auto";
             newFrameDocument.getElementById('description').style.cursor="default";
@@ -199,7 +199,7 @@ function revertBody(){
 }
 
 
-addExpense("Food","1000","efwygidcsuhcb");
+/*addExpense("Food","1000","efwygidcsuhcb");
 addExpense("Outing","2500","Yay!");
 addExpense("Outing","2500","");
-openPopup("Food","1000","efwygidcsuhcb",true);
+openPopup("Food","1000","efwygidcsuhcb",true);*/
