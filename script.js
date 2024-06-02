@@ -93,8 +93,13 @@ function openPopup(nameId, amountExpense, description,flag) {
     newFrame.width = '45%';
     newFrame.height = '540';
     newFrame.style.position = 'absolute';
-    newFrame.style.right = '18vw';
 
+    let leftPos=297+((container2.offsetWidth-Math.round(document.body.offsetWidth*(45/100)))/2);
+    newFrame.style.left=leftPos.toString()+'px';
+    window.addEventListener('resize',function(){
+        let leftPos=297+((container2.offsetWidth-Math.round(document.body.offsetWidth*(45/100)))/2);
+        newFrame.style.left=leftPos.toString()+'px';
+    })
 
     newFrame.style.top =  '100px';
     newFrame.style.borderRadius = '40px';
@@ -123,36 +128,7 @@ function openPopup(nameId, amountExpense, description,flag) {
         newFrameDocument.getElementById('name').value = nameId;
         newFrameDocument.getElementById('description').value = description;
 
-        window.addEventListener('resize',setPosition);
-        setPosition();
-        function setPosition(){
-            if(window.matchMedia("(min-width: 1461px)").matches){
-                newFrame.style.right = '18vw';
-            }
-            else if(window.matchMedia("(max-width: 1461px)").matches) {
-                newFrame.style.right = '18vw';
-                container2.style.height = '81vh';
-            }
-            else if(window.matchMedia("(max-width: 1320px)").matches) {
-                newFrame.style.right = '16.5vw';
-                container2.style.height = '83vh';
-            }
-            else if(window.matchMedia("(max-width: 1151px)").matches) {
-                newFrame.style.right = '14vw';
-            }
-            else if(window.matchMedia("(max-width: 1020px)").matches) {
-                newFrame.style.right = '13.5vw';
-                newFrame.style.top =  '97px';
-                container2.style.height = '84vh';
-            }
-            else if(window.matchMedia("(max-width: 955px)").matches) {
-                newFrame.style.top =  '95px';
-                newFrame.style.right = '11.5vw';
-            }
-            else if(window.matchMedia("(max-width: 820px)").matches) {
-                newFrame.style.left = '45vw';
-            }
-        }
+
         if(flag===true){
             newFrameDocument.getElementById('amount').style.fontWeight='bold';
             newFrameDocument.getElementById('amount').style.color='blue';
