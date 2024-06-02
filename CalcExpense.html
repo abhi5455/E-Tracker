@@ -11,7 +11,7 @@
             padding-left:30px;
             padding-right:30px;
             height: 524px;
-            background: linear-gradient(45deg, aqua,hotpink);
+            background: linear-gradient(45deg, #00BFFF, lightgrey);
         }
         .maindiv{
             display:flex;
@@ -57,6 +57,7 @@
             padding: 10px;
             font-family: Arial;
             outline: 1px solid black;
+            resize: none;
         }
         input::placeholder, textarea::placeholder{
             font-weight: bold;
@@ -73,7 +74,7 @@
             top: 30px;
             height: 40px;
         }
-        #ok, #okCancel{
+        #ok{
             border: none;
             border-radius: 10px;
             width: 100px;
@@ -85,6 +86,15 @@
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         }
         #okCancel{
+            border: none;
+            border-radius: 10px;
+            width: 100px;
+            margin-right: 20px;
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            font-size: large;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
             display: none;
         }
         #cancel{
@@ -136,15 +146,15 @@
   <div class="maindiv">
     <div class="section">
         <label for="name" class="popUplabel">Expense NameId: </label>
-        <input type="text" id="name" placeholder="Enter Expense Name, eg: FoodExpense">
+        <input type="text" id="name" placeholder="Enter Expense Name, eg: FoodExpense" class="popupInputs">
     </div>
     <div class="section">
         <label for="amount" class="popUplabel">Expense Amount:</label>
-        <input type="text" id="amount" placeholder="Enter Amount, eg: 1000">
+        <input type="text" id="amount" placeholder="Enter Amount, eg: 1000" class="popupInputs">
     </div>
     <div class="section">
         <label for="description" class="popUplabel">Description:</label>
-        <textarea id="description" placeholder="eg: Spent during Dinner with Friends"></textarea>
+        <textarea id="description" placeholder="eg: Spent during Dinner with Friends" class="popupInputs"></textarea>
     </div>
       <div id="buttons">
           <button id="ok">OK</button>
