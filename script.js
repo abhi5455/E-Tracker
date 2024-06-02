@@ -6,6 +6,7 @@ let container2=document.getElementById('container2');
 let container1=document.getElementById('container1');
 let mainHeader=document.getElementById('mainHeader');
 
+container2.style.height=(container2.offsetHeight).toString()+'px';
 
 let amountExpense="";
 let nameId="";
@@ -81,9 +82,6 @@ function openPopup(nameId, amountExpense, description,flag) {
     container1.style.pointerEvents="none";
     container2.style.pointerEvents="none";
 
-    // Calculate the center position of the old window
-    var centerX = window.screenX + (window.innerWidth / 2);
-    var centerY = window.screenY + (window.innerHeight / 2);
 
 
     // Create a new frame element
@@ -123,6 +121,10 @@ function openPopup(nameId, amountExpense, description,flag) {
             revertBody();
             document.body.removeChild(newFrame);
         })
+        okCancelButton.addEventListener('click', function(){
+            document.body.removeChild(newFrame);
+            revertBody();
+        })
 
         newFrameDocument.getElementById('amount').value = amountExpense;
         newFrameDocument.getElementById('name').value = nameId;
@@ -149,10 +151,7 @@ function openPopup(nameId, amountExpense, description,flag) {
             newFrameDocument.body.style.pointerEvents="none";
             newFrameDocument.body.style.background='linear-gradient(45deg, #00BFFF, lightgreen)';
             okCancelButton.style.pointerEvents="auto";
-            okCancelButton.addEventListener('click', function(){
-                revertBody();
-                document.body.removeChild(newFrame);
-            })
+
         }
     }
 }
