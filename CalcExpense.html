@@ -100,10 +100,20 @@
             cursor: pointer;
             transform: scale(1.08);
         }
-        p{
+        #error{
             position: absolute;
-            top:175px;
-            left: 250px;
+            top:280px;
+            left: 50px;
+            color: red;
+            font-family: Arial;
+            font-size: small;
+            font-weight: bold;
+            display:none;
+        }
+        #error1{
+            position: absolute;
+            top:140px;
+            left: 50px;
             color: red;
             font-family: Arial;
             font-size: small;
@@ -142,7 +152,8 @@
           <button id="okCancel">OK</button>
 
       </div>
-      <p id="error">Enter a Valid Amount</p>
+      <p id="error">! Enter a Valid Amount</p>
+      <p id="error1">! Enter a NameId</p>
       <h5 id="alertDate">SEPTEMBER 10, 2024</h5>
   </div>
   <script>
@@ -157,6 +168,14 @@
           else
               error.style.display="none";
       });
+      document.getElementById('name').addEventListener('input',function(){
+          if(document.getElementById('name').value===""){
+              document.getElementById('error1').style.display="block";
+          }
+          else{
+              document.getElementById('error1').style.display="none";
+          }
+      })
   </script>
 </body>
 </html>

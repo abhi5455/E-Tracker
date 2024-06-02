@@ -25,12 +25,14 @@ compute.addEventListener('click',function(){
 })
 
 
-function addExpense(){
+function addExpense(name,amount){
     let expense=document.getElementById('expenseMsg');
     let newExpense=expense.cloneNode(true);
     newExpense.style.display="flex";
     let lastElement=document.getElementById('addNew');
     /*Need to edit*/newExpense.id="expense";
+    newExpense.querySelector('#label1').textContent=name;
+    newExpense.querySelector('#label2').textContent=amount;
     container2.insertBefore(newExpense,lastElement);
     let expenses=document.getElementsByClassName('expense');
     for(let i=0;i<expenses.length;i++) {
@@ -113,7 +115,20 @@ function openPopup(nameId, amountExpense, description,flag) {
         let cancelButton=newFrameDocument.getElementById('cancel');
         let okCancelButton=newFrameDocument.getElementById('okCancel');
         okButton.addEventListener('click', function(){
-            addExpense();
+            function okButtonFlag(){
+                if((newFrameDocument.getElementById('name').value==="")||(newFrameDocument.getElementById('amount').value==="")||(newFrameDocument.getElementById('error').style.display==="block")){
+                    if(newFrameDocument.getElementById('name').value==="")
+                        newFrameDocument.getElementById('error1').style.display="block";
+                    if((newFrameDocument.getElementById('amount').value==="")||(newFrameDocument.getElementById('error').style.display==="block"))
+                        newFrameDocument.getElementById('error').style.display="block";
+                    return false;
+                }
+                return true;
+            }
+            let addExpenseFlag=okButtonFlag();
+            if(!addExpenseFlag)
+                return;
+            addExpense(newFrameDocument.getElementById('name').value,newFrameDocument.getElementById('amount').value);
             revertBody();
             document.body.removeChild(newFrame);
         })
