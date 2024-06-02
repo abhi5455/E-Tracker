@@ -199,6 +199,9 @@ header{
     top: 25px;
     color: red;
 }
+.label13{
+    display: none;
+}
 .expense:hover, .threeLines:hover, .personInfo:hover, .info:hover{
     cursor: pointer;
     transform: scale(1.01);

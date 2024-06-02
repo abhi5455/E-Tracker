@@ -25,7 +25,7 @@ compute.addEventListener('click',function(){
 })
 
 
-function addExpense(name,amount){
+function addExpense(name,amount,description){
     let expense=document.getElementById('expenseMsg');
     let newExpense=expense.cloneNode(true);
     newExpense.style.display="flex";
@@ -33,18 +33,28 @@ function addExpense(name,amount){
     /*Need to edit*/newExpense.id="expense";
     newExpense.querySelector('#label1').textContent=name;
     newExpense.querySelector('#label2').textContent=amount;
+    newExpense.querySelector('#label3').textContent=description;
     container2.insertBefore(newExpense,lastElement);
     let expenses=document.getElementsByClassName('expense');
     for(let i=0;i<expenses.length;i++) {
         expenses[i].addEventListener("click", function (event) {
+            event.stopImmediatePropagation();
             let clickedExpense = event.currentTarget;
             let nameId=clickedExpense.querySelector('#label1').textContent;
             let amount=clickedExpense.querySelector('#label2').textContent;
-            openPopup(nameId,amount," ",true);
+            let description=clickedExpense.querySelector('#label3').textContent;
+            if(description==="") {
+                description = "No description";
+            }
+            openPopup(nameId,amount,description,true);
 
         });
     }
 }
+addExpense("Food","1000","efwygidcsuhcb");
+addExpense("Outing","2500","Yay!");
+addExpense("Outing","2500","");
+
 
 
 let plusButton=document.getElementById('plus');
@@ -52,7 +62,7 @@ plusButton.addEventListener('click',function(){
 
     openPopup(nameId, amountExpense, description,flag);
 })
-openPopup(nameId, amountExpense, description,flag);
+//openPopup(nameId, amountExpense, description,flag);
 
 
 //setting info icon
@@ -128,7 +138,7 @@ function openPopup(nameId, amountExpense, description,flag) {
             let addExpenseFlag=okButtonFlag();
             if(!addExpenseFlag)
                 return;
-            addExpense(newFrameDocument.getElementById('name').value,newFrameDocument.getElementById('amount').value);
+            addExpense(newFrameDocument.getElementById('name').value,newFrameDocument.getElementById('amount').value,newFrameDocument.getElementById('description').value);
             revertBody();
             document.body.removeChild(newFrame);
         })
@@ -155,7 +165,7 @@ function openPopup(nameId, amountExpense, description,flag) {
             newFrameDocument.getElementById('name').style.fontSize='x-large';
             newFrameDocument.getElementById('description').style.color='blue';
             newFrameDocument.getElementById('description').style.fontWeight='bold';
-            newFrameDocument.getElementById('description').style.fontSize='x-large';
+            newFrameDocument.getElementById('description').style.fontSize='medium';
             newFrameDocument.getElementById('ok').style.display='none';
             newFrameDocument.getElementById('cancel').style.display='none';
             newFrameDocument.getElementById('okCancel').style.display='block';
