@@ -51,9 +51,6 @@ function addExpense(name,amount,description){
         });
     }
 }
-addExpense("Food","1000","efwygidcsuhcb");
-addExpense("Outing","2500","Yay!");
-addExpense("Outing","2500","");
 
 
 
@@ -86,14 +83,13 @@ threelines.addEventListener('click', function(){
 
 function openPopup(nameId, amountExpense, description,flag) {
     document.body.style.backgroundColor="black";
-    container2.style.opacity=".6";
+    container2.style.opacity=".4";
     container1.style.opacity=".6";
     mainHeader.style.opacity=".6";
     mainHeader.style.outline="none";
     mainHeader.style.pointerEvents="none";
     container1.style.pointerEvents="none";
     container2.style.pointerEvents="none";
-
 
 
     // Create a new frame element
@@ -131,6 +127,7 @@ function openPopup(nameId, amountExpense, description,flag) {
                         newFrameDocument.getElementById('error1').style.display="block";
                     if((newFrameDocument.getElementById('amount').value==="")||(newFrameDocument.getElementById('error').style.display==="block"))
                         newFrameDocument.getElementById('error').style.display="block";
+                    //newFrameDocument.getElementById('cancel').style.outline="1px solid red";
                     return false;
                 }
                 return true;
@@ -158,25 +155,35 @@ function openPopup(nameId, amountExpense, description,flag) {
 
         if(flag===true){
             newFrameDocument.getElementById('amount').style.fontWeight='bold';
-            newFrameDocument.getElementById('amount').style.color='blue';
+            newFrameDocument.getElementById('amount').style.color='black';
             newFrameDocument.getElementById('amount').style.fontSize='x-large';
-            newFrameDocument.getElementById('name').style.color='blue';
+            newFrameDocument.getElementById('name').style.color='black';
             newFrameDocument.getElementById('name').style.fontWeight='bold';
             newFrameDocument.getElementById('name').style.fontSize='x-large';
-            newFrameDocument.getElementById('description').style.color='blue';
+            newFrameDocument.getElementById('description').style.color='black';
             newFrameDocument.getElementById('description').style.fontWeight='bold';
             newFrameDocument.getElementById('description').style.fontSize='medium';
             newFrameDocument.getElementById('ok').style.display='none';
             newFrameDocument.getElementById('cancel').style.display='none';
             newFrameDocument.getElementById('okCancel').style.display='block';
-            /*let popuplabels=newFrameDocument.getElementsByClassName('popUplabel');
-            for(let i=0;i<popuplabels.length;i++){
-                popuplabels[i].style.color='dimgrey';
-            }*/
+            let popuplabels=newFrameDocument.getElementsByClassName('popUplabel');
+            for(let i=0;i<popuplabels.length;i++) {
+                popuplabels[i].style.color = '#333333';
+            }
             newFrameDocument.body.style.pointerEvents="none";
-            newFrameDocument.body.style.background='linear-gradient(45deg, #00BFFF, lightgreen)';
+            newFrameDocument.body.style.background='linear-gradient(45deg, #00BFFF, #007FFF)';
             okCancelButton.style.pointerEvents="auto";
-
+            newFrameDocument.getElementById('description').style.pointerEvents="auto";
+            newFrameDocument.getElementById('description').style.cursor="default";
+            newFrameDocument.getElementById('description').readOnly="true";
+            /*let popupInputs=newFrameDocument.getElementsByClassName('popupInputs');
+            for(let i=0;i<popupInputs.length;i++){
+                //popupInputs[i].style.backgroundColor="lightgray";
+                popupInputs[i].style.color="black";
+                popupInputs[i].style.outline="none";
+                popupInputs[i].style.fontFamily="Arial";
+                newFrameDocument.body.style.opacity=".7"
+            }*/
         }
     }
 }
@@ -190,3 +197,9 @@ function revertBody(){
     container1.style.pointerEvents="auto";
     container2.style.pointerEvents="auto";
 }
+
+
+addExpense("Food","1000","efwygidcsuhcb");
+addExpense("Outing","2500","Yay!");
+addExpense("Outing","2500","");
+openPopup("Food","1000","efwygidcsuhcb",true);
