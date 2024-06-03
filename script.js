@@ -155,11 +155,11 @@ function openPopup(nameId, amountExpense, description,flag) {
 
         if(flag===true){
             newFrameDocument.getElementById('amount').style.fontWeight='bold';
-            newFrameDocument.getElementById('amount').style.color='black';
+            newFrameDocument.getElementById('amount').style.color='red';
             newFrameDocument.getElementById('amount').style.fontSize='x-large';
             newFrameDocument.getElementById('name').style.color='black';
             newFrameDocument.getElementById('name').style.fontWeight='bold';
-            newFrameDocument.getElementById('name').style.fontSize='x-large';
+            newFrameDocument.getElementById('name').style.fontSize='large';
             newFrameDocument.getElementById('description').style.color='black';
             newFrameDocument.getElementById('description').style.fontWeight='bold';
             newFrameDocument.getElementById('description').style.fontSize='medium';
@@ -169,9 +169,11 @@ function openPopup(nameId, amountExpense, description,flag) {
             let popuplabels=newFrameDocument.getElementsByClassName('popUplabel');
             for(let i=0;i<popuplabels.length;i++){
                 popuplabels[i].style.color='#333333';
-}
+                popuplabels[i].style.fontSize='large';
+            }
             newFrameDocument.body.style.pointerEvents="none";
-            newFrameDocument.body.style.background='linear-gradient(45deg, aqua,hotpink)';
+            newFrameDocument.body.style.background='linear-gradient(45deg, rgb(0, 255, 255,0.75), rgb(255, 105, 180,0.75))';
+            //newFrameDocument.body.style.background='linear-gradient(45deg, #00BFFF, lightgrey)';
             okCancelButton.style.pointerEvents="auto";
             newFrameDocument.getElementById('description').style.pointerEvents="auto";
             newFrameDocument.getElementById('description').style.cursor="default";
@@ -199,7 +201,7 @@ function revertBody(){
 }
 
 
-/*addExpense("Food","1000","efwygidcsuhcb");
+/*addExpense("FoodExpense","1000","Spent During Dinner with Friends");
 addExpense("Outing","2500","Yay!");
-addExpense("Outing","2500","");
+addExpense("Groceries","500","Home");/*
 openPopup("Food","1000","efwygidcsuhcb",true);*/
