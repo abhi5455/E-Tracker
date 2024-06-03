@@ -45,6 +45,7 @@ function addExpense(name,amount,description){
     newExpense.querySelector('#label1').textContent=name;
     newExpense.querySelector('#label2').textContent="₹"+amount;
     newExpense.querySelector('#label3').textContent=description;
+    newExpense.querySelector('#expenseFooter').textContent=userSelectDate;
     container2.insertBefore(newExpense,lastElement);
     let expenses=document.getElementsByClassName('expense');
     for(let i=0;i<expenses.length;i++) {

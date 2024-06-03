@@ -166,6 +166,13 @@ header{
         opacity: .6;
     }
     display: none;
+    overflow-y: hidden;
+}
+#expenseFooter{
+    position: relative;
+    top: 40px;
+    right: 20px;
+    font-size: 12px;
 }
 .addNew {
     display: flex;
