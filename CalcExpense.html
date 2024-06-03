@@ -97,7 +97,7 @@
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
             display: none;
         }
-        #cancel{
+        #cancel, #delete{
             border: none;
             border-radius: 10px;
             width: 100px;
@@ -106,7 +106,10 @@
             font-size: large;
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         }
-        #ok:hover, #cancel:hover, #okCancel:hover{
+        #delete{
+            display: none;
+        }
+        #ok:hover, #cancel:hover, #okCancel:hover, #delete:hover{
             cursor: pointer;
             transform: scale(1.08);
         }
@@ -160,6 +163,7 @@
           <button id="ok">OK</button>
           <button id="cancel">Cancel</button>
           <button id="okCancel">OK</button>
+          <button id="delete">Delete</button>
 
       </div>
       <p id="error">! Enter a Valid Amount</p>

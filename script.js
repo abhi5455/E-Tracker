@@ -6,12 +6,23 @@ let container2=document.getElementById('container2');
 let container1=document.getElementById('container1');
 let mainHeader=document.getElementById('mainHeader');
 
+function getTimeStamp(){
+    let today = new Date();
+    let hours = today.getHours().toString().padStart(2, '0');
+    let minutes = today.getMinutes().toString().padStart(2, '0');
+    let seconds = today.getSeconds().toString().padStart(2, '0');
+    let day=userSelectDate.split(' ').join('');
+    return hours + minutes + seconds+"00" + day;
+}
+
 container2.style.height=(container2.offsetHeight).toString()+'px';
 
 let amountExpense="";
 let nameId="";
 let description="";
 let flag=false;
+let clickedExpense;
+let clickedExpenseOriginalId;
 
 //Compute
 let showEstimate=document.getElementById('showEstimate');
@@ -30,7 +41,7 @@ function addExpense(name,amount,description){
     let newExpense=expense.cloneNode(true);
     newExpense.style.display="flex";
     let lastElement=document.getElementById('addNew');
-    /*Need to edit*/newExpense.id="expense";
+    /*Need to edit*/newExpense.id=getTimeStamp();
     newExpense.querySelector('#label1').textContent=name;
     newExpense.querySelector('#label2').textContent="₹"+amount;
     newExpense.querySelector('#label3').textContent=description;
@@ -39,7 +50,9 @@ function addExpense(name,amount,description){
     for(let i=0;i<expenses.length;i++) {
         expenses[i].addEventListener("click", function (event) {
             event.stopImmediatePropagation();
-            let clickedExpense = event.currentTarget;
+            clickedExpense = event.currentTarget;
+            clickedExpenseOriginalId=clickedExpense.id;
+            clickedExpense.id="canbeDeleted"
             let nameId=clickedExpense.querySelector('#label1').textContent;
             let amount=clickedExpense.querySelector('#label2').textContent;
             let description=clickedExpense.querySelector('#label3').textContent;
@@ -47,12 +60,14 @@ function addExpense(name,amount,description){
                 description = "No description";
             }
             openPopup(nameId,amount,description,true);
-
         });
     }
 }
 
-
+function deleteExpense(){
+    let Child=document.getElementById('canbeDeleted');
+    container2.removeChild(Child);
+}
 
 let plusButton=document.getElementById('plus');
 plusButton.addEventListener('click',function(){
@@ -120,6 +135,7 @@ function openPopup(nameId, amountExpense, description,flag) {
         let okButton=newFrameDocument.getElementById('ok');
         let cancelButton=newFrameDocument.getElementById('cancel');
         let okCancelButton=newFrameDocument.getElementById('okCancel');
+        let deleteButton=newFrameDocument.getElementById('delete');
         okButton.addEventListener('click', function(){
             function okButtonFlag(){
                 if((newFrameDocument.getElementById('name').value==="")||(newFrameDocument.getElementById('amount').value==="")||(newFrameDocument.getElementById('error').style.display==="block")){
@@ -145,7 +161,13 @@ function openPopup(nameId, amountExpense, description,flag) {
         })
         okCancelButton.addEventListener('click', function(){
             document.body.removeChild(newFrame);
+            clickedExpense.id=clickedExpenseOriginalId;
             revertBody();
+        })
+        deleteButton.addEventListener('click', function(){
+            deleteExpense();
+            revertBody();
+            document.body.removeChild(newFrame);
         })
 
         newFrameDocument.getElementById('amount').value = amountExpense;
@@ -166,15 +188,17 @@ function openPopup(nameId, amountExpense, description,flag) {
             newFrameDocument.getElementById('ok').style.display='none';
             newFrameDocument.getElementById('cancel').style.display='none';
             newFrameDocument.getElementById('okCancel').style.display='block';
+            newFrameDocument.getElementById('delete').style.display='block';
             let popuplabels=newFrameDocument.getElementsByClassName('popUplabel');
             for(let i=0;i<popuplabels.length;i++){
                 popuplabels[i].style.color='#333333';
                 popuplabels[i].style.fontSize='large';
             }
             newFrameDocument.body.style.pointerEvents="none";
+            okCancelButton.style.pointerEvents="auto";
+            deleteButton.style.pointerEvents="auto";
             newFrameDocument.body.style.background='linear-gradient(45deg, rgb(0, 255, 255,0.75), rgb(255, 105, 180,0.75))';
             //newFrameDocument.body.style.background='linear-gradient(45deg, #00BFFF, lightgrey)';
-            okCancelButton.style.pointerEvents="auto";
             newFrameDocument.getElementById('description').style.pointerEvents="auto";
             newFrameDocument.getElementById('description').style.cursor="default";
             newFrameDocument.getElementById('description').readOnly="true";
