@@ -21,6 +21,7 @@ let amountExpense="";
 let nameId="";
 let description="";
 let flag=false;
+let threeLinesFlag=false;
 let clickedExpense;
 let clickedExpenseOriginalId;
 
@@ -93,8 +94,14 @@ info.addEventListener('mouseleave',function(){
 
 let threelines=document.getElementById('threelines');
 threelines.addEventListener('click', function(){
-    let container2=document.getElementById('container2');
-    container2.innerHTML="";
+    if(threeLinesFlag===false) {
+        container1.style.display = "none";
+        threeLinesFlag=true;
+    }
+    else{
+        container1.style.display="flex";
+        threeLinesFlag=false;
+    }
 })
 
 function openPopup(nameId, amountExpense, description,flag) {
@@ -116,10 +123,10 @@ function openPopup(nameId, amountExpense, description,flag) {
     newFrame.height = '540';
     newFrame.style.position = 'absolute';
 
-    let leftPos=297+((container2.offsetWidth-Math.round(document.body.offsetWidth*(45/100)))/2);
+    let leftPos=(container1.offsetWidth)+((container2.offsetWidth-Math.round(document.body.offsetWidth*(45/100)))/2);
     newFrame.style.left=leftPos.toString()+'px';
     window.addEventListener('resize',function(){
-        let leftPos=297+((container2.offsetWidth-Math.round(document.body.offsetWidth*(45/100)))/2);
+        let leftPos=(container1.offsetWidth)+((container2.offsetWidth-Math.round(document.body.offsetWidth*(45/100)))/2);
         newFrame.style.left=leftPos.toString()+'px';
     })
 
@@ -232,4 +239,4 @@ function revertBody(){
 /*addExpense("FoodExpense","1000","Spent During Dinner with Friends");
 addExpense("Outing","2500","Alappuzha Beach");
 addExpense("Groceries","500","Home");/*
-openPopup("Food","1000","efwygidcsuhcb",true);*/
+openPopup("Food","1000","efwygidcsuhcb",true);/**/
