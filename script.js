@@ -176,18 +176,18 @@ function openPopup(nameId, amountExpense, description,flag) {
 
 
         if(flag===true){
-            newFrameDocument.getElementById('amount').style.fontWeight='bold';
-            newFrameDocument.getElementById('amount').style.color='red';
-            newFrameDocument.getElementById('amount').style.fontSize='x-large';
-            newFrameDocument.getElementById('amount').style.fontFamily='Century Schoolbook';
             newFrameDocument.getElementById('name').style.color='black';
             newFrameDocument.getElementById('name').style.fontWeight='bold';
             newFrameDocument.getElementById('name').style.fontSize='large';
             newFrameDocument.getElementById('name').style.fontFamily='Century Schoolbook';
+            newFrameDocument.getElementById('amount').style.fontWeight='bold';
+            newFrameDocument.getElementById('amount').style.color='red';
+            newFrameDocument.getElementById('amount').style.fontSize='x-large';
+            newFrameDocument.getElementById('amount').style.fontFamily='Century Schoolbook';
             newFrameDocument.getElementById('description').style.color='black';
             newFrameDocument.getElementById('description').style.fontWeight='bold';
-            newFrameDocument.getElementById('description').style.fontSize='medium';
-            newFrameDocument.getElementById('description').style.fontFamily='Calibri';
+            newFrameDocument.getElementById('description').style.fontSize='15px';
+            newFrameDocument.getElementById('description').style.fontFamily='Arial';
             newFrameDocument.getElementById('ok').style.display='none';
             newFrameDocument.getElementById('cancel').style.display='none';
             newFrameDocument.getElementById('okCancel').style.display='block';
