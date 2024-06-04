@@ -6,6 +6,7 @@ let endDate=document.getElementById('end-date');
 function computePopupSetPos() {
     computePopup.style.position = "absolute";
     computePopup.style.left = ((container1.offsetWidth) + ((container2.offsetWidth - 350) / 2) - 2).toString() + "px";
+    //computePopup.style.left = (((container1.offsetWidth+container2.offsetWidth - 350) / 2) - 2).toString() + "px";
     console.log(startDate.value,endDate.value);
 }
 function blurBody(){
