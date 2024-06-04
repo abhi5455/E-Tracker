@@ -25,20 +25,6 @@ let threeLinesFlag=false;
 let clickedExpense;
 let clickedExpenseOriginalId;
 
-//Compute
-let showEstimate=document.getElementById('showEstimate');
-compute.addEventListener('click',function(){
-    computePopupSetPos()
-    computePopup.style.display='flex';
-    blurBody();
-    from.textContent="From: "+startDate.value;
-    to.textContent="To: "+endDate.value;
-    days.textContent="Days: 1 day";
-    showEstimate.style.display="block";
-    console.log(userSelectDate);
-
-})
-
 
 function addExpense(name,amount,description){
     let expense=document.getElementById('expenseMsg');
