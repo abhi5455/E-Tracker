@@ -27,7 +27,15 @@ popupCancelButton.addEventListener('click',function(){
 popupComputeButton.addEventListener('click',function(){
     from.textContent=" \u00A0 From: \u00A0\u00A0\u00A0"+startDate.value;
     to.textContent=" \u00A0 To: \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"+endDate.value;
-    days.textContent="\u00A0 No of Days: \u00A0\u00A01";
+    let date1=new Date(endDate.value);
+    let date2=new Date(startDate.value);
+    let noOfDays=(date1-date2)/(1000 * 3600 * 24);
+    if(noOfDays<0){
+        noOfDays*=-1;
+        from.textContent=" \u00A0 From: \u00A0\u00A0\u00A0"+endDate.value;
+        to.textContent=" \u00A0 To: \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"+startDate.value;
+    }
+    days.textContent="\u00A0 No of Days: \u00A0\u00A0"+noOfDays;
     showEstimate.style.display="block";
     revertBody();
     computePopup.style.display="none";
