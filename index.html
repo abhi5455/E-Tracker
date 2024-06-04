@@ -5,6 +5,7 @@
     <title>abhi5455/Expense_Tracker</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="computePopup.css">
 </head>
 <body>
     <header id="mainHeader">
@@ -224,7 +225,24 @@
             </div>
         </div>
     </div>
+    <div class="computePopup" id="computePopup">
+        <div class="userInteract">
+            <div>
+                <label for="start-date" >Start Date: </label>
+                <input type="date" id="start-date" class="computeLabel" required>
+            </div>
+            <div>
+                <label for="end-date">&nbsp;End Date: </label>
+                <input type="date" id="end-date" class="computeLabel" required>
+            </div>
+        </div>
+        <div>
+            <button id="popupComputeButton">Compute</button>
+            <button id="popupCancelButton">Cancel</button>
+        </div>
+    </div>
     <script src="scriptCalendar.js"></script>
     <script src="script.js"></script>
+    <script src="computePopupScript.js"></script>
 </body>
 </html>

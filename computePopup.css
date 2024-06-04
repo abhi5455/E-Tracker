@@ -1,0 +1,57 @@
+.computePopup {
+    position: absolute;
+    top: 230px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 350px;
+    height: 260px;
+    border-radius: 18px;
+    font-size: 20px;
+    background: linear-gradient(45deg, rgb(0, 191, 255,0.8), rgb(255, 255, 255, 0.9));
+    display: none;
+}
+.userInteract{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 150px;
+    align-items: center;
+}
+.computeLabel{
+    font-family: "Century Schoolbook";
+    font-size: 17px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: 1px solid gray;
+    margin-left: 5px;
+    width: 150px;
+}
+#popupComputeButton{
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    margin-right: 20px;
+    background-color: blue;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+#popupCancelButton{
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    color: blue;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+#popupComputeButton:hover, #popupCancelButton:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+}
