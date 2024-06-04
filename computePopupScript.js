@@ -35,6 +35,9 @@ popupComputeButton.addEventListener('click',function(){
         from.textContent=" \u00A0 From: \u00A0\u00A0\u00A0"+endDate.value;
         to.textContent=" \u00A0 To: \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"+startDate.value;
     }
+    else if(isNaN(noOfDays)){
+        noOfDays=0;
+    }
     days.textContent="\u00A0 No of Days: \u00A0\u00A0"+noOfDays;
     showEstimate.style.display="block";
     revertBody();
