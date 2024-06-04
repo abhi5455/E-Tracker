@@ -115,12 +115,13 @@ header{
     height: auto;
     min-height: 150px;
     border-radius: 10px;
-    font-family: Calibri;
+    font-family: "Century Schoolbook";
+    font-size: 14px;
     background: linear-gradient(45deg, floralwhite,white, floralwhite);
     h4{
         margin-top: 10px;
         margin-bottom: 15px;
-        opacity: .5;
+        opacity: .7;
     }
     h3{
         display: flex;
@@ -128,7 +129,7 @@ header{
     }
     #totalExpense{
         position: relative;
-        top: 4px;
+        top: 5px;
         color: red;
     }
     display: none;
