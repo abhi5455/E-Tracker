@@ -193,8 +193,7 @@ function openPopup(nameId, amountExpense, description,flag) {
             newFrameDocument.getElementById('amount').style.fontSize='x-large';
             newFrameDocument.getElementById('amount').style.fontFamily='Century Schoolbook';
             newFrameDocument.getElementById('description').style.color='black';
-            newFrameDocument.getElementById('description').style.fontWeight='bold';
-            newFrameDocument.getElementById('description').style.fontSize='15px';
+            newFrameDocument.getElementById('description').style.fontSize='16px';
             newFrameDocument.getElementById('description').style.fontFamily='Arial';
             newFrameDocument.getElementById('ok').style.display='none';
             newFrameDocument.getElementById('cancel').style.display='none';
@@ -238,5 +237,6 @@ function revertBody(){
 
 /*addExpense("FoodExpense","1000","Spent During Dinner with Friends");
 addExpense("Outing","2500","Alappuzha Beach");
-addExpense("Groceries","500","Home");/*
+addExpense("Groceries","500","Home");
+addExpense("Vegetables","1200","Home");/*
 openPopup("Food","1000","efwygidcsuhcb",true);/**/
