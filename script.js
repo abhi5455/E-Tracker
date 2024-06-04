@@ -28,8 +28,11 @@ let clickedExpenseOriginalId;
 //Compute
 let showEstimate=document.getElementById('showEstimate');
 compute.addEventListener('click',function(){
-    from.textContent="From: "+userSelectDate;
-    to.textContent="To: "+userSelectDate;
+    computePopupSetPos()
+    computePopup.style.display='flex';
+    blurBody();
+    from.textContent="From: "+startDate.value;
+    to.textContent="To: "+endDate.value;
     days.textContent="Days: 1 day";
     showEstimate.style.display="block";
     console.log(userSelectDate);
@@ -105,15 +108,7 @@ threelines.addEventListener('click', function(){
 })
 
 function openPopup(nameId, amountExpense, description,flag) {
-    document.body.style.backgroundColor="black";
-    container2.style.opacity=".4";
-    container1.style.opacity=".6";
-    mainHeader.style.opacity=".6";
-    mainHeader.style.outline="none";
-    mainHeader.style.pointerEvents="none";
-    container1.style.pointerEvents="none";
-    container2.style.pointerEvents="none";
-
+    blurBody();
 
     // Create a new frame element
     var newFrame = document.createElement('iframe');
@@ -202,7 +197,8 @@ function openPopup(nameId, amountExpense, description,flag) {
             let popuplabels=newFrameDocument.getElementsByClassName('popUplabel');
             for(let i=0;i<popuplabels.length;i++){
                 popuplabels[i].style.color='#333333';
-                popuplabels[i].style.fontSize='large';
+                popuplabels[i].style.fontSize='19px';
+                popuplabels[i].style.fontFamily='Calibri';
             }
             newFrameDocument.body.style.pointerEvents="none";
             okCancelButton.style.pointerEvents="auto";
