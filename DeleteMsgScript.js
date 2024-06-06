@@ -8,7 +8,7 @@ function askToDelete(){
     deleteMsg.style.top='220px';
     deleteMsg.style.borderRadius='20px';
     deleteMsg.style.border='none';
-    deleteMsg.style.outline='2px solid black';
+    deleteMsg.style.outline='1px solid black';
 
     let leftPos=((container1.offsetWidth)+((container2.offsetWidth-400))/2);
     deleteMsg.style.left=leftPos.toString()+'px';
