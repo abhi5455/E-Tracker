@@ -154,9 +154,9 @@ function openPopup(nameId, amountExpense, description,flag) {
             revertBody();
         })
         deleteButton.addEventListener('click', function(){
-            deleteExpense();
-            revertBody();
+            //deleteExpense();
             document.body.removeChild(newFrame);
+            askToDelete(newFrameDocument.getElementById('name').value);
         })
 
         newFrameDocument.getElementById('amount').value = amountExpense;
