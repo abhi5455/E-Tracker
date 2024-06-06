@@ -1,20 +1,19 @@
 function askToDelete(a){
     const deleteMsg=document.createElement("iframe");
     deleteMsg.src='DeleteMsg.html';
-    deleteMsg.width = '400px';
-    deleteMsg.height = '210';
+    deleteMsg.width = '360px';
+    deleteMsg.height = '200';
     deleteMsg.style.position = 'absolute';
     deleteMsg.style.top='220px';
-    deleteMsg.style.borderRadius='20px';
+    deleteMsg.style.borderRadius='25px';
     deleteMsg.style.border='none';
-    deleteMsg.style.outline='1px solid black';
     let text="Do you want to delete "+"'"+a+"'";
 
 
-    let leftPos=((container1.offsetWidth)+((container2.offsetWidth-400))/2);
+    let leftPos=((container1.offsetWidth)+((container2.offsetWidth-360))/2);
     deleteMsg.style.left=leftPos.toString()+'px';
     window.addEventListener('resize',function(){
-        let leftPos=((container1.offsetWidth)+((container2.offsetWidth-400))/2);
+        let leftPos=((container1.offsetWidth)+((container2.offsetWidth-360))/2);
         deleteMsg.style.left=leftPos.toString()+'px';
     })
     deleteMsg.onload = function() {
