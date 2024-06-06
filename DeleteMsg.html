@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+        }
+        {
+            outline: 2px solid red;
+        }
+        header{
+            font-family: Calibri;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid lightgray;
+        }
+        p{
+            padding-left: 10px;
+            font-weight: bold;
+        }
+        #x{
+            background-color: white;
+            border: none;
+            height: 30px;
+            width: 35px;
+            position: absolute;
+            color: #A91B0D;
+            right: 0;
+            font-weight: bolder;
+        }
+        #x:hover{
+            background-color: red;
+            color: white;
+        }
+        #message{
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            padding-top: 25px;
+        }
+        #buttons{
+            display: flex;
+            justify-content: center;
+            gap: 19px;
+            height: 30px;
+        }
+        #yes,#no{
+            color: black;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            width: 45px;
+            font-weight: bold;
+        }
+        #yes{
+            outline: 1px dotted blue;
+        }
+        #yes:hover{
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+        }
+        #no{
+            outline: 1px dotted black;
+        }
+        #no:hover{
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <p>Delete Expense</p>
+    <button id="x">X</button>
+</header>
+<div>
+    <div id="message">
+        <img src="warning.png" alt="warning"/>
+          &nbsp;Do you want to delete 'Expense'
+    </div>
+    <div id="buttons">
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+    </div>
+</div>
+
+</body>
+</html>
