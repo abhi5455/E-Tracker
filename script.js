@@ -156,7 +156,13 @@ function openPopup(nameId, amountExpense, description,flag) {
         deleteButton.addEventListener('click', function(){
             //deleteExpense();
             document.body.removeChild(newFrame);
-            askToDelete(newFrameDocument.getElementById('name').value);
+            let word=newFrameDocument.getElementById('name').value;
+            let extractedWord=word.substring(0,7);
+            let fillerStr="";
+            if(word.length>extractedWord.length){
+                fillerStr="...";
+            }
+            askToDelete(extractedWord+fillerStr);
         })
 
         newFrameDocument.getElementById('amount').value = amountExpense;

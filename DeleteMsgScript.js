@@ -8,6 +8,8 @@ function askToDelete(a){
     deleteMsg.style.borderRadius='20px';
     deleteMsg.style.border='none';
     deleteMsg.style.outline='1px solid black';
+    let text="Do you want to delete "+"'"+a+"'";
+    console.log(text.length);
 
 
     let leftPos=((container1.offsetWidth)+((container2.offsetWidth-400))/2);
@@ -17,7 +19,7 @@ function askToDelete(a){
         deleteMsg.style.left=leftPos.toString()+'px';
     })
     deleteMsg.onload = function() {
-        deleteMsg.contentDocument.getElementById('warningMsg').textContent="Do you want to delete "+"'"+a+"'";
+        deleteMsg.contentDocument.getElementById('warningMsg').textContent=text;
         deleteMsg.contentDocument.getElementById('x').addEventListener('click', function(){
             document.body.removeChild(deleteMsg);
             revertBody();
