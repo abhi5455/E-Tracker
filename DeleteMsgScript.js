@@ -1,5 +1,5 @@
 function askToDelete(a){
-    var deleteMsg=document.createElement("iframe");
+    const deleteMsg=document.createElement("iframe");
     deleteMsg.src='DeleteMsg.html';
     deleteMsg.width = '400px';
     deleteMsg.height = '210';
@@ -9,7 +9,6 @@ function askToDelete(a){
     deleteMsg.style.border='none';
     deleteMsg.style.outline='1px solid black';
     let text="Do you want to delete "+"'"+a+"'";
-    console.log(text.length);
 
 
     let leftPos=((container1.offsetWidth)+((container2.offsetWidth-400))/2);
