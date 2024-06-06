@@ -217,7 +217,7 @@ function revertBody(){
 }
 
 
-/*addExpense("FoodExpense","1000","Spent During Dinner with Friends");
+addExpense("FoodExpense","1000","Spent During Dinner with Friends");
 addExpense("Outing","2500","Alappuzha Beach");
 addExpense("Groceries","500","Home");
 addExpense("Vegetables","1200","Home");/*
