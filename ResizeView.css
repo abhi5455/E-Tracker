@@ -1,0 +1,60 @@
+@media(max-width: 690px){
+    {
+        outline: 2px solid red;
+    }
+    body{
+    }
+    .todayTag{
+        left: 80px;
+    }
+    .DateUpdate{
+        left: 35%;
+    }
+    .box{
+        flex-direction: column;
+    }
+    .container1{
+        width: 100%;
+        height: 420px;
+        justify-content: center;
+        padding-top: 2px;
+    }
+    .calendar{
+        position: inherit;
+        width: 72%;
+        height: 345px;
+        font-size: 13px;
+        outline: 1px solid black;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        background-color: white;
+    }
+    .header{
+        border-top: none;
+        border-radius: 25px 25px 0 0  ;
+    }
+    .COLUMN{
+        height: 30px;
+        width: 30px;
+    }
+    .calculateExpense{
+        width: 125px;
+        font-size: 14px;
+        height: 40px;
+        top: 430px;
+    }
+    #calculateExpenseImg{
+        height: 35px;
+        width: 35px;
+    }
+    .container2{
+        max-height: 720px;
+    }
+    #showEstimate{
+        position: absolute;
+        top: 1130px;
+    }
+
+
+}

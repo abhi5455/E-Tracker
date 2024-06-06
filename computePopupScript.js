@@ -7,6 +7,7 @@ let endDate=document.getElementById('end-date');
 function computePopupSetPos() {
     computePopup.style.position = "absolute";
     computePopup.style.left = ((container1.offsetWidth) + ((container2.offsetWidth - 350) / 2) - 2).toString() + "px";
+    resizeComputePopup();
     //computePopup.style.left = (((container1.offsetWidth+container2.offsetWidth - 350) / 2) - 2).toString() + "px";
     console.log(startDate.value,endDate.value);
 }
@@ -55,3 +56,10 @@ compute.addEventListener('click',function(){
     computePopup.style.display='flex';
     blurBody();
 })
+function resizeComputePopup(){
+    if(matchMedia("(max-width: 690px)")) {
+        computePopup.style.left = (((container2.offsetWidth - 350) / 2) - 2).toString() + "px";;
+        computePopup.style.position="relative";
+        computePopup.style.top = "-600px";
+    }
+}

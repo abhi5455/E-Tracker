@@ -109,6 +109,7 @@ function openPopup(nameId, amountExpense, description,flag) {
     window.addEventListener('resize',function(){
         let leftPos=(container1.offsetWidth)+((container2.offsetWidth-Math.round(document.body.offsetWidth*(45/100)))/2);
         newFrame.style.left=leftPos.toString()+'px';
+        resizeOpenPopup();
     })
 
     newFrame.style.top =  '100px';
@@ -208,6 +209,16 @@ function openPopup(nameId, amountExpense, description,flag) {
                 popupInputs[i].style.fontFamily="Arial";
                 newFrameDocument.body.style.opacity=".7"
             }*/
+        }
+    }
+    resizeOpenPopup();
+    function resizeOpenPopup(){
+        if(matchMedia("(max-width: 690px)")) {
+            leftPos = ((container2.offsetWidth - Math.round(document.body.offsetWidth * (90 / 100))) / 2)-5;
+            newFrame.style.left = leftPos.toString() + 'px';
+            newFrame.width="90%";
+            newFrame.style.position="relative";
+            newFrame.style.top = "-600px";
         }
     }
 }

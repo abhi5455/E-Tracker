@@ -15,6 +15,7 @@ function askToDelete(a){
     window.addEventListener('resize',function(){
         let leftPos=((container1.offsetWidth)+((container2.offsetWidth-360))/2);
         deleteMsg.style.left=leftPos.toString()+'px';
+        resizeDeleteMsg();
     })
     deleteMsg.onload = function() {
         deleteMsg.contentDocument.getElementById('warningMsg').textContent=text;
@@ -35,5 +36,15 @@ function askToDelete(a){
     }
 
     blurBody();
+    resizeDeleteMsg();
     document.body.appendChild(deleteMsg);
+    
+    function resizeDeleteMsg(){
+        if(matchMedia("(max-width: 690px)")) {
+            leftPos=((container2.offsetWidth-360)/2)-5;
+            deleteMsg.style.left = leftPos.toString() + 'px';
+            deleteMsg.style.position="relative";
+            deleteMsg.style.top = "-500px";
+        }
+    }
 }
