@@ -230,7 +230,7 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
             newFrame.style.left = leftPos.toString() + 'px';
             newFrame.width="90%";
             newFrame.style.position="absolute";
-            let topPos=container1.offsetHeight+115;
+            let topPos=container1.offsetHeight+95;
             newFrame.style.top = topPos.toString() + 'px';
         }
         else{
@@ -238,7 +238,15 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
             newFrame.style.left=leftPos.toString()+'px';
             newFrame.width = '45%';
             newFrame.style.position = 'absolute';
-            newFrame.style.top =  '100px';
+            newFrame.style.top =  '90px';
+            if(matchMedia("(max-width: 1500px)").matches){
+                container1.style.height = "659px"
+                container2.style.height = "634px";
+            }
+            else {
+                container1.style.height = "659px"
+                container2.style.height = "597px";
+            }
         }
     }
 }
