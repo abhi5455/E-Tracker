@@ -59,7 +59,8 @@ compute.addEventListener('click',function(){
 function resizeComputePopup(){
     if(matchMedia("(max-width: 690px)")) {
         computePopup.style.left = (((container2.offsetWidth - 350) / 2) - 2).toString() + "px";;
-        computePopup.style.position="relative";
-        computePopup.style.top = "-600px";
+        computePopup.style.position="absolute";
+        let topPos=container1.offsetHeight+105;
+        computePopup.style.top = topPos.toString() + 'px';
     }
 }
