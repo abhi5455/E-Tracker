@@ -48,5 +48,12 @@ function askToDelete(a){
             let topPos=container1.offsetHeight+200;
             deleteMsg.style.top=topPos.toString()+'px';
         }
+        else{
+            leftPos=((container1.offsetWidth)+((container2.offsetWidth-360))/2);
+            deleteMsg.style.left=leftPos.toString()+'px';
+            deleteMsg.width = '360px';
+            deleteMsg.style.position = 'absolute';
+            deleteMsg.style.top='220px';
+        }
     }
 }

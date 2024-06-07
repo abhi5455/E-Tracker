@@ -64,4 +64,9 @@ function resizeComputePopup(){
         let topPos=container1.offsetHeight+105;
         computePopup.style.top = topPos.toString() + 'px';
     }
+    else{
+        computePopup.style.position = "absolute";
+        computePopup.style.left = ((container1.offsetWidth) + ((container2.offsetWidth - 350) / 2) - 2).toString() + "px";
+        computePopup.style.top='220px';
+    }
 }

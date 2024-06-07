@@ -222,6 +222,13 @@ function openPopup(nameId, amountExpense, description,flag) {
             let topPos=container1.offsetHeight+115;
             newFrame.style.top = topPos.toString() + 'px';
         }
+        else{
+            leftPos=(container1.offsetWidth)+((container2.offsetWidth-Math.round(document.body.offsetWidth*(45/100)))/2);
+            newFrame.style.left=leftPos.toString()+'px';
+            newFrame.width = '45%';
+            newFrame.style.position = 'absolute';
+            newFrame.style.top =  '100px';
+        }
     }
 }
 function revertBody(){
