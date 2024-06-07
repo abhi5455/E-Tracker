@@ -217,8 +217,9 @@ function openPopup(nameId, amountExpense, description,flag) {
             leftPos = ((container2.offsetWidth - Math.round(document.body.offsetWidth * (90 / 100))) / 2)-5;
             newFrame.style.left = leftPos.toString() + 'px';
             newFrame.width="90%";
-            newFrame.style.position="relative";
-            newFrame.style.top = "-600px";
+            newFrame.style.position="absolute";
+            let topPos=container1.offsetHeight+115;
+            newFrame.style.top = topPos.toString() + 'px';
         }
     }
 }
