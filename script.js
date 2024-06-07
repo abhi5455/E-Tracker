@@ -239,6 +239,7 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
             newFrame.width = '45%';
             newFrame.style.position = 'absolute';
             newFrame.style.top =  '90px';
+            /*Need to Modify*/
             if(matchMedia("(max-width: 1500px)").matches){
                 container1.style.height = "659px"
                 container2.style.height = "634px";
