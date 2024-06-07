@@ -56,3 +56,21 @@
     cursor: pointer;
     transform: scale(1.08);
 }
+#searchBy{
+    position: absolute;
+    top: 155px;
+    font-size: 14px;
+}
+#searchBy:hover{
+    cursor: pointer;
+    color: #A91B0D;
+    text-decoration: underline;
+    text-decoration-color: #A91B0D;
+}
+#searchByLabel{
+    margin-bottom: -2px;
+    display: none;
+}
+#searchByLabel label{
+    font-size: 16px;
+}

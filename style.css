@@ -210,7 +210,7 @@ header{
     top: 25px;
     color: red;
 }
-.label13{
+.label13, .label14{
     display: none;
 }
 .expense:hover, .threeLines:hover, .personInfo:hover, .info:hover{

@@ -219,6 +219,7 @@
                     <label id="label1" class="label11">ExpenseName</label>
                     <label id="label2" class="label12">Rupees</label>
                     <label id="label3" class="label13">Description</label>
+                    <label id="label4" class="label14">GroupName</label>
                 </div>
                 <h5 id="expenseFooter">20 JUNE 2024</h5>
             </div>
@@ -237,11 +238,16 @@
                 <label for="end-date">&nbsp;End Date: </label>
                 <input type="date" id="end-date" class="computeLabel" required>
             </div>
+            <div id="searchByLabel">
+                <label for="groupName">Group Name:</label>
+                <input type="text" id="groupName" class="computeLabel" placeholder="Enter group Name" required>
+            </div>
         </div>
         <div>
             <button id="popupComputeButton">Compute</button>
             <button id="popupCancelButton">Cancel</button>
         </div>
+        <p id="searchBy">Search by Group Name</p>
     </div>
     <script src="scriptCalendar.js"></script>
     <script src="script.js"></script>

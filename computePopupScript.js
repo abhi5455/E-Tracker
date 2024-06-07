@@ -24,6 +24,8 @@ function blurBody(){
 popupCancelButton.addEventListener('click',function(){
     revertBody();
     computePopup.style.display="none";
+    searchBy.style.display="block";
+    document.getElementById("searchByLabel").style.display="none";
 });
 popupComputeButton.addEventListener('click',function(){
     from.textContent=" \u00A0 From: \u00A0\u00A0\u00A0"+startDate.value;
@@ -43,6 +45,8 @@ popupComputeButton.addEventListener('click',function(){
     showEstimate.style.display="block";
     revertBody();
     computePopup.style.display="none";
+    searchBy.style.display="block";
+    document.getElementById("searchByLabel").style.display="none";
     console.log(userSelectDate);
 })
 
@@ -70,3 +74,9 @@ function resizeComputePopup(){
         computePopup.style.top='220px';
     }
 }
+
+let searchBy=document.getElementById("searchBy");
+searchBy.addEventListener("click",function(){
+    searchBy.style.display="none";
+    document.getElementById("searchByLabel").style.display="block";
+})

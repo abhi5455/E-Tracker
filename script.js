@@ -19,6 +19,7 @@ container2.style.height=(container2.offsetHeight).toString()+'px';
 
 let amountExpense="";
 let nameId="";
+let groupName="";
 let description="";
 let flag=false;
 let threeLinesFlag=false;
@@ -26,7 +27,7 @@ let clickedExpense;
 let clickedExpenseOriginalId;
 
 
-function addExpense(name,amount,description){
+function addExpense(name,amount,groupName,description){
     let expense=document.getElementById('expenseMsg');
     let newExpense=expense.cloneNode(true);
     newExpense.style.display="flex";
@@ -35,6 +36,7 @@ function addExpense(name,amount,description){
     newExpense.querySelector('#label1').textContent=name;
     newExpense.querySelector('#label2').textContent="₹"+amount;
     newExpense.querySelector('#label3').textContent=description;
+    newExpense.querySelector('#label4').textContent=groupName;
     newExpense.querySelector('#expenseFooter').textContent=userSelectDate;
     container2.insertBefore(newExpense,lastElement);
     let expenses=document.getElementsByClassName('expense');
@@ -46,11 +48,15 @@ function addExpense(name,amount,description){
             clickedExpense.id="canbeDeleted"
             let nameId=clickedExpense.querySelector('#label1').textContent;
             let amount=clickedExpense.querySelector('#label2').textContent;
+            let groupName=clickedExpense.querySelector('#label4').textContent;
             let description=clickedExpense.querySelector('#label3').textContent;
             if(description==="") {
                 description = "No description";
             }
-            openPopup(nameId,amount,description,true);
+            if(groupName===""){
+                groupName= "No Category Added";
+            }
+            openPopup(nameId,amount,groupName,description,true);
         });
     }
 }
@@ -63,7 +69,7 @@ function deleteExpense(){
 let plusButton=document.getElementById('plus');
 plusButton.addEventListener('click',function(){
 
-    openPopup(nameId, amountExpense, description,flag);
+    openPopup(nameId, amountExpense, groupName, description,flag);
 })
 //openPopup(nameId, amountExpense, description,flag);
 
@@ -93,7 +99,7 @@ threelines.addEventListener('click', function(){
     }
 })
 
-function openPopup(nameId, amountExpense, description,flag) {
+function openPopup(nameId, amountExpense, groupName, description,flag) {
     blurBody();
 
     // Create a new frame element
@@ -101,7 +107,7 @@ function openPopup(nameId, amountExpense, description,flag) {
     newFrame.src = 'CalcExpense.html';
     newFrame.width = '700px';
     newFrame.width = '45%';
-    newFrame.height = '540';
+    newFrame.height = '590';
     newFrame.style.position = 'absolute';
 
     let leftPos=(container1.offsetWidth)+((container2.offsetWidth-Math.round(document.body.offsetWidth*(45/100)))/2);
@@ -112,7 +118,7 @@ function openPopup(nameId, amountExpense, description,flag) {
         resizeOpenPopup();
     })
 
-    newFrame.style.top =  '100px';
+    newFrame.style.top =  '90px';
     newFrame.style.borderRadius = '40px';
     newFrame.style.border = 'none';
 
@@ -168,8 +174,8 @@ function openPopup(nameId, amountExpense, description,flag) {
 
         newFrameDocument.getElementById('amount').value = amountExpense;
         newFrameDocument.getElementById('name').value = nameId;
+        newFrameDocument.getElementById('groupName').value = groupName;
         newFrameDocument.getElementById('description').value = description;
-
 
         if(flag===true){
             newFrameDocument.getElementById('name').style.color='black';
@@ -180,6 +186,11 @@ function openPopup(nameId, amountExpense, description,flag) {
             newFrameDocument.getElementById('amount').style.color='red';
             newFrameDocument.getElementById('amount').style.fontSize='x-large';
             newFrameDocument.getElementById('amount').style.fontFamily='Century Schoolbook';
+            newFrameDocument.getElementById('groupName').style.fontWeight='bold';
+            newFrameDocument.getElementById('groupName').style.fontSize='17px';
+            newFrameDocument.querySelector('label').style.fontSize='15px';
+            newFrameDocument.getElementById('groupName').style.fontFamily='Arial';
+            newFrameDocument.getElementById('groupName').style.fontWeight='normal';
             newFrameDocument.getElementById('description').style.color='black';
             newFrameDocument.getElementById('description').style.fontSize='16px';
             newFrameDocument.getElementById('description').style.fontFamily='Arial';
@@ -243,8 +254,8 @@ function revertBody(){
 }
 
 
-addExpense("FoodExpense","1000","Spent During Dinner with Friends");
-addExpense("Outing","2500","Alappuzha Beach");
-addExpense("Groceries","500","Home");
-addExpense("Vegetables","1200","Home");/*
+addExpense("FoodExpense","1000","Food","Spent During Dinner with Friends");
+addExpense("Outing","2500","Fun","Alappuzha Beach");
+addExpense("Groceries","500","MonthlyExpense","Home");
+addExpense("Vegetables","1200","MonthlyExpense","Home");/*
 openPopup("Food","1000","efwygidcsuhcb",true);/**/

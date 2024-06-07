@@ -10,7 +10,7 @@
         body{
             padding-left:30px;
             padding-right:30px;
-            height: 524px;
+            height: 574px;
             background: linear-gradient(45deg, rgb(0, 191, 255,0.8), rgb(211, 211, 211, 0.8));
         }
         .maindiv{
@@ -136,13 +136,30 @@
         #alertDate{
             position: absolute;
             right: 40px;
-            bottom: 5px;
+            bottom: -7px;
             @media(max-width: 500px){
                 right: 35px;
-                bottom: -8px;
+                bottom: -15px;
             }
         }
-
+        #groupLabel{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            height: 50px;
+        }
+        #groupLabel label{
+            display: none;
+            top: 10px;
+            font-size: 17px;
+        }
+        #groupName{
+            position: relative;
+            top: 20px;
+        }
+        #descriptionLabel{
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -155,7 +172,11 @@
         <label for="amount" class="popUplabel">Expense Amount:</label>
         <input type="text" id="amount" placeholder="Enter Amount, eg: 1000" class="popupInputs" required>
     </div>
-    <div class="section">
+      <div class="section" id="groupLabel">
+          <label for="groupName" class="popUplabel">Category:&nbsp;&nbsp;&nbsp;</label>
+          <input type="text" id="groupName" placeholder="Enter Category, eg: Food" class="popupInputs" required>
+      </div>
+    <div class="section" id="descriptionLabel">
         <label for="description" class="popUplabel">Description:</label>
         <textarea id="description" placeholder="eg: Spent during Dinner with Friends" class="popupInputs"></textarea>
     </div>
