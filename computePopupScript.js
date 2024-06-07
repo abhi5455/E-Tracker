@@ -46,7 +46,7 @@ popupComputeButton.addEventListener('click',function(){
     console.log(userSelectDate);
 })
 
-window.onresize=computePopupSetPos;
+window.addEventListener('resize',computePopupSetPos);
 
 //Compute
 let showEstimate=document.getElementById('showEstimate');
@@ -57,8 +57,9 @@ compute.addEventListener('click',function(){
     blurBody();
 })
 function resizeComputePopup(){
-    if(matchMedia("(max-width: 690px)")) {
-        computePopup.style.left = (((container2.offsetWidth - 350) / 2) - 2).toString() + "px";;
+    const mediaQuery =window.matchMedia("(max-width: 690px)")
+    if(mediaQuery.matches) {
+        computePopup.style.left = (((container2.offsetWidth - 350) / 2) - 2).toString() + "px";
         computePopup.style.position="absolute";
         let topPos=container1.offsetHeight+105;
         computePopup.style.top = topPos.toString() + 'px';

@@ -213,7 +213,8 @@ function openPopup(nameId, amountExpense, description,flag) {
     }
     resizeOpenPopup();
     function resizeOpenPopup(){
-        if(matchMedia("(max-width: 690px)")) {
+        const mediaQuery =window.matchMedia("(max-width: 690px)")
+        if(mediaQuery.matches) {
             leftPos = ((container2.offsetWidth - Math.round(document.body.offsetWidth * (90 / 100))) / 2)-5;
             newFrame.style.left = leftPos.toString() + 'px';
             newFrame.width="90%";

@@ -40,7 +40,8 @@ function askToDelete(a){
     document.body.appendChild(deleteMsg);
     
     function resizeDeleteMsg(){
-        if(matchMedia("(max-width: 690px)")) {
+        const mediaQuery =window.matchMedia("(max-width: 690px)")
+        if(mediaQuery.matches) {
             leftPos=((container2.offsetWidth-360)/2)-5;
             deleteMsg.style.left = leftPos.toString() + 'px';
             deleteMsg.style.position="absolute";
