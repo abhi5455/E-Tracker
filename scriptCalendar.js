@@ -65,22 +65,22 @@ function setDate(currentMonth, currentYear){
         firstDay.textContent=i.toString();
         firstDay.addEventListener('mouseenter',function () {
             firstDay.style.backgroundColor="lightgrey";
-            if((headerMonth!==calendarMonth)&&(headerYear!==calendarYear)){
-                currentClickDate.style.backgroundColor="white";
+            if((headerMonth===calendarMonth)&&(headerYear===calendarYear.toString())){
+                currentClickDate.style.backgroundColor="lightskyblue";
             }
             else{
-                currentClickDate.style.backgroundColor="lightskyblue";
+                currentClickDate.style.backgroundColor="white";
             }
             firstDay.style.backgroundColor="lightgrey";
             firstDay.style.cursor="pointer";
         })
         firstDay.addEventListener('mouseleave',function () {
             firstDay.style.backgroundColor="white";
-            if((headerMonth!==calendarMonth)&&(headerYear!==calendarYear)){
-                currentClickDate.style.backgroundColor="white";
+            if((headerMonth===calendarMonth)&&(headerYear===calendarYear.toString())){
+                currentClickDate.style.backgroundColor="lightskyblue";
             }
             else{
-                currentClickDate.style.backgroundColor="lightskyblue";
+                currentClickDate.style.backgroundColor="white";
             }
         })
         day=day+1;
@@ -129,12 +129,11 @@ function changeCalendarLeft(){
     monthNo=monthNo-1===0?12:monthNo-1;
     setDate(monthNo,year);
     //click update
-    if((headerMonth!==calendarMonth)&&(headerYear!==calendarYear)){
-        console.log(headerMonth+calendarMonth+headerYear+calendarYear)
-        currentClickDate.style.backgroundColor="white";
+    if((headerMonth===calendarMonth)&&(headerYear===calendarYear.toString())){
+        currentClickDate.style.backgroundColor="lightskyblue";
     }
     else{
-        currentClickDate.style.backgroundColor="lightskyblue";
+        currentClickDate.style.backgroundColor="white";
     }
 }
 function changeCalendarRight(){
@@ -154,12 +153,11 @@ function changeCalendarRight(){
     monthNo=monthNo+1===13?1:monthNo+1;
     setDate(monthNo,year);
     //click update
-    if((headerMonth!==calendarMonth)&&(headerYear!==calendarYear)){
-        console.log(headerMonth+calendarMonth+headerYear+calendarYear)
-        currentClickDate.style.backgroundColor="white";
+    if((headerMonth===calendarMonth)&&(headerYear===calendarYear.toString())){
+        currentClickDate.style.backgroundColor="lightskyblue";
     }
     else{
-        currentClickDate.style.backgroundColor="lightskyblue";
+        currentClickDate.style.backgroundColor="white";
     }
 }
 
