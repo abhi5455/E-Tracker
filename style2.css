@@ -36,12 +36,26 @@ body{
     left: 10px;
     top: 17px;
     height: 30px;
+    padding-top: 4px;
 }
 #next{
     position: relative;
     top: 17px;
     right: 10px;
     height: 30px;
+    padding-top: 4px;
+}
+#changeYear{
+    position: relative;
+    top: 13px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    display: none;
+}
+.header:hover #changeYear{
+    display: flex;
 }
 .currentMonth{
     display: flex;

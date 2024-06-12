@@ -184,3 +184,28 @@ function dateNumbersClick(){
         prevClickDate.style.backgroundColor="white";
     prevClickDate=document.getElementById(clickedElement.id);
 }
+
+function changeYearsClick(direction){
+    let headerText=document.getElementById('month-year').textContent;
+    const year_month=headerText.split(" ");
+    let monthNo=1;
+    for(let i=1;i<=monthSequence.length;i++) {
+        if (monthSequence[i] === year_month[1]) {
+            monthNo = i;
+            break;
+        }
+    }
+    let year=parseInt(year_month[0]);
+    if(direction==="up"){
+        setDate(monthNo,year-1);
+    }
+    else if(direction==="down"){
+        setDate(monthNo,year+1);
+    }
+    if((headerMonth===calendarMonth)&&(headerYear===calendarYear.toString())){
+        currentClickDate.style.backgroundColor="lightskyblue";
+    }
+    else{
+        currentClickDate.style.backgroundColor="white";
+    }
+}

@@ -31,13 +31,25 @@
             <div class="calendar" id="calendar">
                 <div class="header">
                     <div>
-                        <button id="prev">&lt;</button>
+                        <button id="prev">
+                            <img src="leftArrow.png" alt="back" style="width: 12px;"/>
+                        </button>
+                    </div>
+                    <div id="changeYear">
+                        <button style="background-color: transparent; border: none" onclick="changeYearsClick('up')">
+                            <img src="upArrow.png" style="width:8px; position: relative; bottom: -5px;">
+                        </button>
+                        <button style="background-color: transparent; border: none" onclick="changeYearsClick('down')">
+                            <img src="downArrow.png" style="width:8px; position: relative; top: -5px;">
+                        </button>
                     </div>
                     <div class="currentMonth">
-                        <h2 id="month-year">2020 FEBRUARY</h2>
+                        <h2 id="month-year" style="margin-right: 5px; margin-left: 5px;">2020 JANUARY</h2>
                     </div>
                     <div>
-                        <button id="next">&gt;</button>
+                        <button id="next">
+                            <img src="rightArrow.png" alt="front" style="width: 12px;"/>
+                        </button>
                     </div>
                 </div>
                 <div class="Dates">
@@ -212,7 +224,7 @@
                 <h4 id="to">To: 01 January 2024</h4>
                 <h4 id="days">Days: 1 day</h4>
                 <h3 id="totalExpense">TOTAL EXPENSE: </h3>
-                <h3 id="expense">$500</h3>
+                <h3 id="expense">₹5200 /-</h3>
             </div>
         </div>
         <div class="container2" id="container2">
