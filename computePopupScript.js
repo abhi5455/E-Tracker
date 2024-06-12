@@ -41,6 +41,7 @@ popupComputeButton.addEventListener('click',function(){
     else if(isNaN(noOfDays)){
         noOfDays=0;
     }
+    noOfDays++;
     days.textContent="\u00A0 No of Days: \u00A0\u00A0"+noOfDays;
     showEstimate.style.display="block";
     revertBody();
