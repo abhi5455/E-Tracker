@@ -63,6 +63,9 @@ function setDate(currentMonth, currentYear){
     {
         let firstDay=document.getElementById(day.toString());
         firstDay.textContent=i.toString();
+        /* Adding the redDot
+        let newElement=addRedDot();
+        firstDay.appendChild(newElement);/**/
         firstDay.addEventListener('mouseenter',function () {
             firstDay.style.backgroundColor="lightgrey";
             if((headerMonth===calendarMonth)&&(headerYear===calendarYear.toString())){
@@ -211,5 +214,24 @@ function changeYearsClick(direction){
     }
     else{
         currentClickDate.style.backgroundColor="white";
+    }
+}
+
+function addRedDot(){
+    let newElement=document.createElement('div');
+    newElement.id="redDot";
+    newElement.style.backgroundColor="red";
+    newElement.style.borderRadius="20px 20px 20px 20px";
+    newElement.style.height="4px";
+    newElement.style.width="4px";
+    return newElement;
+}
+function clearRedDot(){
+    for (let i=1;i<=42;i++){
+        let x=document.getElementById(i.toString());
+        let redDot=document.getElementById('redDot');
+        if(x.contains(redDot)){
+            x.removeChild(redDot);
+        }
     }
 }
