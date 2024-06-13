@@ -228,15 +228,15 @@ header{
 #container2 h1{
     position: relative;
     top: 50px;
-    left: calc(50% - 250px);
-    width: 500px;
+    left: calc(50% - 170px);
+    width: 340px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
+    font-size: 26px;
     background: linear-gradient(45deg, red,darkblue,black);
     background-clip: text;
     color: transparent;
-    opacity: .4;
+    opacity: .3;
     /*text-shadow: 2px 2px 3px transparent;*/
 }
