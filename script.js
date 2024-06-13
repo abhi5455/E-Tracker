@@ -92,6 +92,7 @@ info.addEventListener('mouseleave',function(){
 
 
 let threelines=document.getElementById('threelines');
+dateUpdate.onclick=function(){ threelines.click() }
 threelines.addEventListener('click', function(){
     if(threeLinesFlag===false) {
         container1.style.display = "none";
