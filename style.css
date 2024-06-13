@@ -224,3 +224,19 @@ header{
 #infoBlock:hover #infoMsg{
     display: block;
 }
+
+#container2 h1{
+    position: relative;
+    top: 50px;
+    left: calc(50% - 250px);
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    background: linear-gradient(45deg, red,darkblue,black);
+    background-clip: text;
+    color: transparent;
+    opacity: .4;
+    /*text-shadow: 2px 2px 3px transparent;*/
+}

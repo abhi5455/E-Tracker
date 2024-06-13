@@ -167,6 +167,10 @@ for(let i=1;i<=dateNumbers.length;i++){
     dateNumbers[i].addEventListener('click',dateNumbersClick);
 }
 function dateNumbersClick(){
+
+    noExpenseText.style.display="flex";
+    updateDetails();
+
     let clickedElement=event.target;
     if(clickedElement.textContent===""){
         return;

@@ -5,6 +5,7 @@ let days=document.getElementById('days');
 let container2=document.getElementById('container2');
 let container1=document.getElementById('container1');
 let mainHeader=document.getElementById('mainHeader');
+let noExpenseText=document.getElementById("noExpenseText");
 
 function getTimeStamp(){
     let today = new Date();
@@ -28,6 +29,9 @@ let clickedExpenseOriginalId;
 
 
 function addExpense(name,amount,groupName,description){
+
+    noExpenseText.style.display="none";
+
     let expense=document.getElementById('expenseMsg');
     let newExpense=expense.cloneNode(true);
     newExpense.style.display="flex";
@@ -261,10 +265,3 @@ function revertBody(){
     container1.style.pointerEvents="auto";
     container2.style.pointerEvents="auto";
 }
-
-
-/*addExpense("FoodExpense","1000","Food","Spent During Dinner with Friends");
-addExpense("Outing","2500","Fun","Alappuzha Beach");
-addExpense("Groceries","500","MonthlyExpense","Home");
-addExpense("Vegetables","1200","","Home");/*
-openPopup("Food","1000","efwygidcsuhcb",true);/**/
