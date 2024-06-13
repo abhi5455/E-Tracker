@@ -97,8 +97,12 @@ body{
     border-radius: 9px;
     border: none;
     font-weight: bold;
-    font-size: 12.5px;
+    font-size: 13px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .COLUMN:hover{
     cursor: pointer;
