@@ -221,7 +221,7 @@ function addRedDot(){
     let newElement=document.createElement('div');
     newElement.id="redDot";
     newElement.style.backgroundColor="red";
-    newElement.style.borderRadius="20px 20px 20px 20px";
+    newElement.style.borderRadius="25px 25px 25px 25px";
     newElement.style.height="4px";
     newElement.style.width="4px";
     return newElement;
