@@ -1,9 +1,4 @@
 @media(max-width: 690px){
-    {
-        outline: 2px solid red;
-    }
-    body{
-    }
     .todayTag{
         left: 80px;
     }
