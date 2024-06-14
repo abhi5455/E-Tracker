@@ -212,7 +212,7 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
             newFrameDocument.body.style.pointerEvents="none";
             okCancelButton.style.pointerEvents="auto";
             deleteButton.style.pointerEvents="auto";
-            newFrameDocument.body.style.background='linear-gradient(45deg, rgb(0, 255, 255,0.79), rgb(255, 105, 180,0.75))';
+            newFrameDocument.body.style.background='linear-gradient(45deg, rgb(0, 255, 255,0.78), rgb(255, 105, 180,0.75))';
             //newFrameDocument.body.style.background='linear-gradient(45deg, #00BFFF, lightgrey)';
             newFrameDocument.getElementById('description').style.pointerEvents="auto";
             newFrameDocument.getElementById('description').style.cursor="default";
