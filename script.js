@@ -152,7 +152,7 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
             let addExpenseFlag=okButtonFlag();
             if(!addExpenseFlag)
                 return;
-            addExpense(newFrameDocument.getElementById('name').value,newFrameDocument.getElementById('amount').value,newFrameDocument.getElementById('description').value);
+            addExpense(newFrameDocument.getElementById('name').value,newFrameDocument.getElementById('amount').value,newFrameDocument.getElementById('groupName').value,newFrameDocument.getElementById('description').value);
             revertBody();
             document.body.removeChild(newFrame);
         })
