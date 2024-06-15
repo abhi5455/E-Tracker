@@ -16,11 +16,11 @@
     }
     .calendar{
         position: inherit;
-        width: 72%;
+        width: 71%;
         height: 345px;
         font-size: 13px;
         border: none;
-        border-radius: 20px;
+        border-radius: 17px;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         background-color: white;
     }
