@@ -234,8 +234,8 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
             leftPos = ((container2.offsetWidth - Math.round(document.body.offsetWidth * (90 / 100))) / 2)-5;
             newFrame.style.left = leftPos.toString() + 'px';
             newFrame.width="90%";
-            newFrame.style.position="absolute";
-            let topPos=container1.offsetHeight+95;
+            newFrame.style.position="fixed";
+            let topPos=80;
             newFrame.style.top = topPos.toString() + 'px';
         }
         else{
