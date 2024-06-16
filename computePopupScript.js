@@ -65,8 +65,8 @@ function resizeComputePopup(){
     const mediaQuery =window.matchMedia("(max-width: 690px)")
     if(mediaQuery.matches) {
         computePopup.style.left = (((container2.offsetWidth - 350) / 2) - 2).toString() + "px";
-        computePopup.style.position="absolute";
-        let topPos=container1.offsetHeight+105;
+        computePopup.style.position="fixed";
+        let topPos=(window.innerHeight/2)-150;
         computePopup.style.top = topPos.toString() + 'px';
     }
     else{
