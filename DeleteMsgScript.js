@@ -44,8 +44,8 @@ function askToDelete(a){
         if(mediaQuery.matches) {
             leftPos=((container2.offsetWidth-360)/2)-5;
             deleteMsg.style.left = leftPos.toString() + 'px';
-            deleteMsg.style.position="absolute";
-            let topPos=container1.offsetHeight+200;
+            deleteMsg.style.position="fixed";
+            let topPos=210;
             deleteMsg.style.top=topPos.toString()+'px';
         }
         else{
