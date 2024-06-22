@@ -1,4 +1,16 @@
 @media(max-width: 690px){
+    {
+        outline: 1px solid red;
+    }
+    html{
+        overflow-x: hidden;
+        background-color: white;
+    }
+    body{
+        background: linear-gradient(45deg, aqua,hotpink);
+        scrollbar-color: transparent transparent;
+        height: 1195px;
+    }
     .todayTag{
         left: 80px;
     }
@@ -9,20 +21,28 @@
         flex-direction: column;
     }
     .container1{
-        width: 100%;
-        height: 420px;
+        width: 93%;
+        position: relative;
+        top: 15px;
+        left: 3.5%;
+        height: 435px;
         justify-content: center;
-        padding-top: 10px;
+        padding-top: 15px;
+        background-color: transparent;
+        /*outline: 1px solid dimgrey;*/
+        border-radius: 15px;
+        box-shadow: 2px 8px 16px 0 rgba(0,0,0,0.2);
     }
     .calendar{
         position: inherit;
+        left: 0;
         width: 71%;
-        height: 345px;
+        height: 335px;
         font-size: 13px;
         border: none;
-        border-radius: 17px;
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        background-color: white;
+        border-radius: 20px;
+        box-shadow: 2px 8px 16px 0 rgba(0,0,0,0.25);
+        background-color: ghostwhite;
     }
     .header{
         border-top: none;
@@ -36,18 +56,64 @@
         width: 125px;
         font-size: 14px;
         height: 40px;
-        top: 440px;
+        top: 377px;
+        box-shadow: 2px 7px 11px 0 rgba(0,0,0,0.3);
     }
     #calculateExpenseImg{
         height: 35px;
         width: 35px;
     }
     .container2{
+        position: relative;
+        top: 30px;
         max-height: 720px;
+        width: 98%;
+        background: linear-gradient(45deg, transparent, transparent);
+        scrollbar-color: transparent transparent;
     }
     #showEstimate{
         position: absolute;
-        top: 1130px;
+        top: 1115px;
     }
-
+    #infoMsg{
+        position: absolute;
+        top: 50px;
+        right: 15px;
+    }
+    .computePopup {
+        background: linear-gradient(45deg, rgb(0, 191, 255, 0.9), rgb(255, 255, 255, 0.9));
+    }
+}
+@media(max-width: 500px){
+    .DateUpdate{
+        left: 37%;
+        font-size: 20px;
+    }
+    .todayTag{
+        left: 70px;
+        font-size: 14px;
+    }
+    .calendar{
+        width: 87%;
+    }
+    .COLUMN1{
+        font-size: 13px;
+    }
+    .COLUMN{
+        font-size: 12px
+    }
+    #month-year{
+        font-size: 17px;
+        display: flex;
+        padding-top: 8px;
+    }
+}
+@media(max-width: 300px){
+    *{
+        display: none;
+    }
+    html{
+        display: block;
+        background: black;
+    }
 }
