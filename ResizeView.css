@@ -110,6 +110,9 @@
     #infoMsg{
         font-size: 14px;
     }
+    #container2 h1{
+        font-size: 19px;
+    }
 }
 @media(max-width: 254px){
     *{
