@@ -9,7 +9,7 @@
     body{
         background: linear-gradient(45deg, aqua,hotpink);
         scrollbar-color: transparent transparent;
-        height: 1195px;
+        height: 1290px;
     }
     .todayTag{
         left: 80px;
@@ -82,6 +82,19 @@
     }
     .computePopup {
         background: linear-gradient(45deg, rgb(0, 191, 255, 0.9), rgb(255, 255, 255, 0.9));
+    }
+    .expense{
+        margin-bottom: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-bottom: 5px;
+        font-family: "EB Garamond" ,sans-serif;
+    }
+    #expenseFooter{
+        top: 53px;
+    }
+    #month-year{
+        font-family: "Century Schoolbook", sans-serif !important;
     }
 }
 @media(max-width: 500px){
