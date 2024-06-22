@@ -107,6 +107,9 @@
         display: flex;
         padding-top: 8px;
     }
+    #infoMsg{
+        font-size: 14px;
+    }
 }
 @media(max-width: 254px){
     *{
