@@ -86,12 +86,12 @@
 }
 @media(max-width: 500px){
     .DateUpdate{
-        left: 37%;
-        font-size: 20px;
+        left: 39%;
+        font-size: 14px;
     }
     .todayTag{
         left: 70px;
-        font-size: 14px;
+        font-size: 13px;
     }
     .calendar{
         width: 87%;
@@ -108,7 +108,7 @@
         padding-top: 8px;
     }
 }
-@media(max-width: 300px){
+@media(max-width: 254px){
     *{
         display: none;
     }
