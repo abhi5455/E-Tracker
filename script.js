@@ -257,12 +257,8 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
     }
 }
 function revertBody(){
-    document.body.style.backgroundColor="white";
-    container2.style.opacity="1";
-    container1.style.opacity="1";
-    mainHeader.style.opacity="1";
-    mainHeader.style.outline="1px solid lightgrey";
-    mainHeader.style.pointerEvents="auto";
-    container1.style.pointerEvents="auto";
-    container2.style.pointerEvents="auto";
+    document.getElementById('pseudoBox').style.display="none";
+}
+function blurBody(){
+    document.getElementById('pseudoBox').style.display="block";
 }
