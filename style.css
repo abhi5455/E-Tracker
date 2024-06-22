@@ -144,10 +144,11 @@ header{
     overflow-y: scroll;
 }
 .expense{
-    margin-top: 2%;
+    margin-top: 1.7%;
     min-height: 80px;
     /*max-height: 80px;*/
     height: 90px;
+    padding-bottom: 10px;
     border-radius: 10px;
     align-content: center;
     background-color: white;
