@@ -12,9 +12,6 @@
     box-shadow: 2px 4px 8px darkslategrey;
     z-index: 999;
     display: none;
-    @media(max-width: 690px){
-        background: linear-gradient(45deg, rgb(0, 191, 255,0.9), rgb(255, 255, 255, 0.9));
-    }
 }
 .userInteract{
     display: flex;
