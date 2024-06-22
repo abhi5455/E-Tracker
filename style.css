@@ -141,9 +141,6 @@ header{
     padding: 2%;
     background: linear-gradient(45deg,aqua, hotpink);
     height: 89vh;
-    @media(max-width: 800px){
-        height: 594px;
-    }
     overflow-y: scroll;
 }
 .expense{
