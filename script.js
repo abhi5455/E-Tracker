@@ -83,10 +83,19 @@ let info=document.getElementById('infoBlock');
 info.addEventListener('mouseenter',function(){
     document.body.style.backgroundColor="dimgray";
     container2.style.opacity=".7";
+    if(matchMedia('(max-width: 690px)').matches){
+        document.getElementById('pseudoBox').style.display="block";
+        document.getElementById('pseudoBox').style.top="70px";
+        document.getElementById('pseudoBox').style.opacity=".5";
+    }
 });
 info.addEventListener('mouseleave',function(){
     document.body.style.backgroundColor="white";
     container2.style.opacity="1";
+    if(matchMedia('(max-width: 690px)').matches){
+        document.getElementById('pseudoBox').style.display="none";
+        document.getElementById('pseudoBox').style.top="0";
+    }
 });
 //
 
@@ -244,15 +253,6 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
             newFrame.width = '45%';
             newFrame.style.position = 'absolute';
             newFrame.style.top =  '90px';
-            /*Need to Modify*/
-            if(matchMedia("(max-width: 1500px)").matches){
-                container1.style.height = "659px"
-                container2.style.height = "634px";
-            }
-            else {
-                container1.style.height = "659px"
-                container2.style.height = "597px";
-            }
         }
     }
 }
