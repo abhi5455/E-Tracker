@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styleCalendar.css">
     <link rel="stylesheet" href="computePopup.css">
     <link rel="stylesheet" href="ResizeView.css">
+    <link rel="stylesheet" href="CalcExpensePopup.css">
 </head>
 <body>
     <header id="mainHeader">
@@ -273,12 +274,44 @@
         </div>
         <p id="searchBy">Search by category</p>
     </div>
-    <div id="pseudoBox" style="position: fixed; left: 0; top: 0; display: none; width: 100%; height: 100%; background-color: black; opacity: .6;">
+    <div id="calcExpPopup" class="calcExpPopup">
+        <div class="maindiv">
+            <div class="section">
+                <label for="name" class="popUplabel">Expense NameId: </label>
+                <input type="text" id="name" placeholder="Enter Expense Name,  eg: FoodExpense" class="popupInputs" required>
+            </div>
+            <div class="section">
+                <label for="amount" class="popUplabel">Expense Amount:</label>
+                <input type="text" id="amount" placeholder="Enter Amount,  eg: 1000" class="popupInputs" required>
+            </div>
+            <div class="section" id="groupLabel">
+                <label for="category" class="popUplabel">Category:&nbsp;&nbsp;&nbsp;</label>
+                <input type="text" id="category" placeholder="Enter Category,  eg: Food" class="popUpInputs">
+            </div>
+            <div class="section" id="descriptionLabel">
+                <label for="description" class="popUplabel">Description:</label>
+                <textarea id="description" placeholder="eg: Spent during Dinner with Friends" class="popupInputs"></textarea>
+            </div>
+            <div id="buttons">
+                <button id="ok">Add</button>
+                <button id="cancel">Cancel</button>
+                <button id="okCancel">OK</button>
+                <button id="delete">Delete</button>
+
+            </div>
+            <p id="error">! Enter a Valid Amount</p>
+            <p id="error1">! Enter a NameId</p>
+            <p id="categoryLabel">category</p>
+            <h5 id="alertDate">SEPTEMBER 10, 2024</h5>
+        </div>
+    </div>
+    <div id="pseudoBox" style="position: fixed; left: 0; top: 0; display: none; width: 100%; height: 100%; background-color: black; opacity: .6; z-index: 500;">
     </div>
     <script src="scriptCalendar.js"></script>
     <script src="script.js"></script>
     <script src="computePopupScript.js"></script>
     <script src="DeleteMsgScript.js"></script>
     <script src="executingFile.js"></script>
+    <script src="CalcExpensePopup.js"></script>
 </body>
 </html>

@@ -1,0 +1,165 @@
+let amount=document.getElementById('amount');
+amount.addEventListener('input',function(){
+    let text=amount.value;
+    let x=/^\d+(\.\d+)?$/.test(text);
+    let error=document.getElementById('error')
+    if(!x && text!==""){
+        error.style.display="block";
+    }
+    else
+        error.style.display="none";
+});
+document.getElementById('name').addEventListener('input',function(){
+    if(document.getElementById('name').value===""){
+        document.getElementById('error1').style.display="block";
+    }
+    else{
+        document.getElementById('error1').style.display="none";
+    }
+})
+
+let calcExpPopup=document.getElementById('calcExpPopup');
+let okButton = document.getElementById('ok');
+let cancelButton = document.getElementById('cancel');
+let okCancelButton = document.getElementById('okCancel');
+let deleteButton = document.getElementById('delete');
+function openPopup(nameId, amountExpense, groupName, description,flag) {
+    blurBody();
+    calcExpPopup.style.display="block";
+
+    resizeOpenPopup();
+
+    window.addEventListener('resize', function () {
+        let leftPos = (container1.offsetWidth) + ((container2.offsetWidth - Math.round(document.body.offsetWidth * (45 / 100))) / 2);
+        calcExpPopup.style.left = leftPos.toString() + 'px';
+        resizeOpenPopup();
+    })
+
+
+    let alertDate = document.getElementById('alertDate');
+    alertDate.textContent = alertDateFormat;
+    okButton.addEventListener('click', function () {
+        function okButtonFlag() {
+            if ((document.getElementById('name').value === "") || (document.getElementById('amount').value === "") || (document.getElementById('error').style.display === "block")) {
+                if (document.getElementById('name').value === "")
+                    document.getElementById('error1').style.display = "block";
+                if ((document.getElementById('amount').value === "") || (document.getElementById('error').style.display === "block"))
+                    document.getElementById('error').style.display = "block";
+                //document.getElementById('cancel').style.outline="1px solid red";
+                return false;
+            }
+            return true;
+        }
+
+        let addExpenseFlag = okButtonFlag();
+        if (!addExpenseFlag)
+            return;
+        addExpense(document.getElementById('name').value, document.getElementById('amount').value, document.getElementById('groupName').value, document.getElementById('description').value);
+        revertBody();
+        calcExpPopup.style.display = 'none';
+    })
+    cancelButton.addEventListener('click', function () {
+        revertBody();
+        calcExpPopup.style.display = 'none';
+    })
+    okCancelButton.addEventListener('click', function () {
+        calcExpPopup.style.display = 'none';
+        clickedExpense.id = clickedExpenseOriginalId;
+        revertBody();
+    })
+    deleteButton.addEventListener('click', function () {
+        //deleteExpense();
+        calcExpPopup.style.display = 'none';
+        let word = document.getElementById('name').value;
+        let extractedWord = word.substring(0, 7);
+        let fillerStr = "";
+        if (word.length > extractedWord.length) {
+            fillerStr = "...";
+        }
+        askToDelete(extractedWord + fillerStr);
+    })
+
+    if(window.matchMedia("(max-width: 690px)").matches){
+        calcExpPopup.style.background = 'linear-gradient(45deg, rgb(0, 191, 255,0.85), rgb(211, 211, 211, 0.9))';
+    }
+
+    document.getElementById('amount').value = amountExpense;
+    document.getElementById('name').value = nameId;
+    document.getElementById('groupName').value = groupName;
+    document.getElementById('description').value = description;
+
+    if (flag === true) {
+        document.getElementById('name').style.color = 'black';
+        document.getElementById('name').style.fontWeight = 'normal';
+        document.getElementById('name').style.fontSize = 'large';
+        document.getElementById('name').style.fontFamily = 'Century Schoolbook';
+        document.getElementById('amount').style.fontWeight = 'bold';
+        document.getElementById('amount').style.color = '#A91B0D';
+        document.getElementById('amount').style.fontSize = 'x-large';
+        document.getElementById('amount').style.fontFamily = 'Century Schoolbook';
+        document.getElementById('groupName').style.fontWeight = 'bold';
+        document.getElementById('groupName').style.fontSize = '17px';
+        document.querySelector('label').style.fontSize = '15px';
+        document.getElementById('groupName').style.fontFamily = 'Arial';
+        document.getElementById('groupName').style.fontWeight = 'normal';
+        document.getElementById('description').style.color = 'black';
+        document.getElementById('description').style.fontSize = '16px';
+        document.getElementById('description').style.fontFamily = 'Arial';
+        document.getElementById('ok').style.display = 'none';
+        document.getElementById('cancel').style.display = 'none';
+        document.getElementById('okCancel').style.display = 'block';
+        document.getElementById('delete').style.display = 'block';
+        let popuplabels = document.getElementsByClassName('popUplabel');
+        for (let i = 0; i < popuplabels.length; i++) {
+            popuplabels[i].style.color = '#333333';
+            popuplabels[i].style.fontSize = '19px';
+            popuplabels[i].style.fontFamily = 'Calibri';
+        }
+
+        calcExpPopup.style.background = 'linear-gradient(45deg, rgb(0, 255, 255,0.78), rgb(255, 105, 180,0.75))';
+        if(window.matchMedia("(max-width: 690px)").matches){
+            calcExpPopup.style.background = 'linear-gradient(45deg, rgb(0, 255, 255,0.85), rgb(255, 105, 180,0.85))';
+            calcExpPopup.style.width = '77%';
+            okButton.style.fontSize = '16px';
+            cancelButton.style.fontSize = '16px';
+            okCancelButton.style.fontSize = '16px';
+            deleteButton.style.fontSize = '16px';
+            let calcExpPopupLabels=document.getElementsByClassName('popUplabel');
+            for(let i=0;i<calcExpPopupLabels.length;i++) {
+                calcExpPopupLabels[i].style.fontSize = '14px';
+                calcExpPopupLabels[i].style.height = '38px';
+                calcExpPopupLabels[i].style.marginTop = '15px';
+            }
+            let calcExpPopupInputs=document.getElementsByClassName('popupInputs');
+            for(let i=0;i<calcExpPopupInputs.length;i++) {
+                calcExpPopupInputs[i].style.fontSize = '17px';
+            }
+        }
+        document.getElementById('description').style.pointerEvents = "auto";
+        document.getElementById('description').style.fontSize = '15px';
+        document.getElementById('description').style.cursor = "default";
+        document.getElementById('description').readOnly = "true";
+        document.getElementById('name').readOnly = "true";
+        document.getElementById('name').style.fontSize = '18px';
+        document.getElementById('amount').readOnly = "true";
+        document.getElementById('amount').style.fontSize = '19px';
+        document.getElementById('category').readOnly = "true";
+
+    }
+
+    function resizeOpenPopup() {
+        const mediaQuery = window.matchMedia("(max-width: 690px)")
+        if (mediaQuery.matches) {
+            let leftPos = ((container2.offsetWidth - Math.round(document.body.offsetWidth * (90 / 100))) / 2) - 5;
+            calcExpPopup.style.left = leftPos.toString() + 'px';
+            calcExpPopup.width = "78%";
+            let topPos = 80;
+            calcExpPopup.style.top = topPos.toString() + 'px';
+        } else {
+            let leftPos = (container1.offsetWidth) + ((container2.offsetWidth - Math.round(document.body.offsetWidth * (50 / 100))) / 2);
+            calcExpPopup.style.left = leftPos.toString() + 'px';
+            calcExpPopup.width = '45%';
+            calcExpPopup.style.position = 'fixed';
+        }
+    }
+}

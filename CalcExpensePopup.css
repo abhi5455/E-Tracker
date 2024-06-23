@@ -1,0 +1,197 @@
+{
+    outline: 2px solid red;
+}
+.calcExpPopup{
+    padding-left:30px;
+    padding-right:30px;
+    height: 590px;
+    width: 45%;
+    position: fixed;
+    top: calc(50% - 293px);
+    left: calc(50% - 293px);
+    background: linear-gradient(45deg, rgb(0, 191, 255,0.8), rgb(211, 211, 211, 0.8));
+    border-radius: 50px;
+    z-index: 510;
+    display: none;
+}
+.maindiv{
+    display:flex;
+    flex-direction: column;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    height: 140px;
+}
+.calcExpPopup label{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: large;
+    padding-left: 10px;
+    font-family: Century Schoolbook;
+    color: black;
+}
+.calcExpPopup input{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    border-radius: 10px;
+    background-color: floralwhite;
+    border: none;
+    font-size: large;
+    padding-left: 10px;
+    outline: 1px solid black;
+    opacity: .8;
+}
+textarea{
+    display: flex;
+    height: 80px;
+    align-content: center;
+    border-radius: 10px;
+    background-color: floralwhite;
+    opacity: .8;
+    border: none;
+    font-size: large;
+    padding: 10px;
+    font-family: Arial;
+    outline: 1px solid black;
+    resize: none;
+}
+input::placeholder, textarea::placeholder{
+    font-weight: bold;
+    color: darkgray;
+}
+textarea::placeholder{
+    position: relative;
+    font-size: large;
+}
+#buttons{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+    height: 40px;
+}
+#ok{
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    margin-right: 20px;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+#okCancel{
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    margin-right: 20px;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    display: none;
+}
+#cancel, #delete{
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    color: blue;
+    font-weight: bold;
+    font-size: large;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+#delete{
+    display: none;
+}
+#ok:hover, #cancel:hover, #okCancel:hover, #delete:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+}
+#error{
+    position: absolute;
+    top:251px;
+    left: 50px;
+    color: red;
+    font-family: Arial;
+    font-size: small;
+    font-weight: bold;
+    display:none;
+}
+#error1{
+    position: absolute;
+    top:111px;
+    left: 50px;
+    color: red;
+    font-family: Arial;
+    font-size: small;
+    font-weight: bold;
+    display: none;
+}
+#alertDate{
+    position: absolute;
+    right: 40px;
+    bottom: -7px;
+    @media(max-width: 500px){
+        right: 35px;
+        bottom: -8px;
+        font-size: 9px;
+    }
+}
+#groupLabel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50px;
+}
+#groupLabel label{
+    display: none;
+    top: 10px;
+    font-size: 17px;
+}
+#category{
+    position: relative;
+    top: 20px;
+}
+#descriptionLabel{
+    margin-top: 10px;
+}
+#categoryLabel{
+    position: absolute;
+    top: 343px;
+    right: 50px;
+}
+@media(max-width: 690px){
+    .calcExpPopup{
+        width: 77%;
+    }
+    .calcExpPopup label{
+        font-size: 14px;
+        height: 38px;
+        margin-top: 15px;
+    }
+    .calcExpPopup input::placeholder, textarea::placeholder{
+        font-size: medium;
+    }
+    #ok, #cancel, #okCancel, #delete{
+        font-size: 16px;
+    }
+    #categoryLabel{
+        top: 339px;
+        font-size: 14px;
+    }
+    #error{
+        top: 253px;
+        font-size: 11px;
+    }
+    #error1{
+        top: 113px;
+        font-size: 11px;
+    }
+}
