@@ -86,7 +86,7 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
 
     document.getElementById('amount').value = amountExpense;
     document.getElementById('name').value = nameId;
-    document.getElementById('groupName').value = groupName;
+    document.getElementById('category').value = groupName;
     document.getElementById('description').value = description;
 
     if (flag === true) {
