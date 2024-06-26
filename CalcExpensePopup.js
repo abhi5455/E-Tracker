@@ -40,6 +40,7 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
     alertDate.textContent = alertDateFormat;
 
     okButton.addEventListener('click', function () {
+        event.stopImmediatePropagation();
         function okButtonFlag() {
             if ((document.getElementById('name').value === "") || (document.getElementById('amount').value === "") || (document.getElementById('error').style.display === "block")) {
                 if (document.getElementById('name').value === "")

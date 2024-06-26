@@ -63,6 +63,11 @@ function addExpense(name,amount,groupName,description){
             openPopup(nameId,amount,groupName,description,true);
         });
     }
+
+    let expenseLabel11=document.getElementsByClassName('label11');
+    for(let i=0;i<expenseLabel11.length;i++) {
+        expenseLabel11[i].style.fontSize="22px";
+    }
 }
 
 function deleteExpense(){
