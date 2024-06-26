@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="computePopup.css">
     <link rel="stylesheet" href="ResizeView.css">
     <link rel="stylesheet" href="CalcExpensePopup.css">
+    <link rel="stylesheet" href="DeleteMsg.css">
 </head>
 <body>
     <header id="mainHeader">
@@ -324,6 +325,22 @@
             <p id="error1">! Enter a NameId</p>
             <p id="categoryLabel">category</p>
             <h5 id="alertDate">SEPTEMBER 10, 2024</h5>
+        </div>
+    </div>
+    <div id="deleteBlock" class="deleteBlock">
+        <header id="deleteHeader">
+            <p>Delete Expense</p>
+            <button id="x">X</button>
+        </header>
+        <div>
+            <div id="message">
+                <img src="Images/warning.png" alt="warning"/>
+                <p id="warningMsg">&nbsp;Do you want to delete 'Expense'</p>
+            </div>
+            <div id="deleteButtons">
+                <button id="yes">Yes</button>
+                <button id="no">No</button>
+            </div>
         </div>
     </div>
     <div id="pseudoBox" style="position: fixed; left: 0; top: 0; display: none; width: 100%; height: 100%; background-color: black; opacity: .6; z-index: 500;">
