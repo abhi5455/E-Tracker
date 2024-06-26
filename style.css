@@ -72,6 +72,7 @@ header{
 }
 .container1{
     width: 301px;
+    min-width: 301px;
     height: 90vh;
     background-color: white;
     display: flex;
@@ -141,6 +142,7 @@ header{
     overflow-y: scroll;
 }
 .expense{
+    scrollbar-color: transparent transparent;
     margin-top: 1.7%;
     min-height: 90px;
     height: 90px;
