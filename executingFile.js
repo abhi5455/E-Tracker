@@ -21,7 +21,6 @@ function updateDetails()
         addExpense("Outing", "2500", "Fun", "Alappuzha Beach");
         addExpense("Groceries", "500", "MonthlyExpense", "Home");
         addExpense("Vegetables", "1200", "", "Home");
-        //addExpense("gaqwfdsyag00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000esdtrgyujo0000000000000000000000000000000000esdabahavcdyesdhiwuguyhabhjaer000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000yes\n", "1200", "", "Home");
         /*openPopup("Food","1000","efwygidcsuhcb",true);/**/
         x++;
     }
