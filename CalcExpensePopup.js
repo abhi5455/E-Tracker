@@ -163,3 +163,10 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
         }
     }
 }
+/*window.addEventListener('resize',function (){
+    if(document.getElementById('okCancel').style.display === 'block'){
+        clickedExpense.id = clickedExpenseOriginalId;
+    }
+    revertBody();
+    calcExpPopup.style.display = 'none';
+})*/
