@@ -1,0 +1,98 @@
+{
+    outline: 2px solid red;
+}
+.deleteBlock{
+    height: 200px;
+    width: 360px;
+    position: fixed;
+    top: 220px;
+    margin: 0;
+    background-color: white;
+    border-radius: 25px;
+    z-index: 510;
+    display: none;
+}
+#deleteHeader{
+    font-family: Calibri, sans-serif;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.deleteBlock p{
+    padding-left: 10px;
+    font-weight: bold;
+    color: dimgray;
+}
+.deleteBlock p:hover{
+    cursor: default;
+}
+#x{
+    background-color: white;
+    border: none;
+    height: 30px;
+    width: 35px;
+    position: absolute;
+    color: #A91B0D;
+    right: 0;
+    font-weight: bolder;
+    border-top-right-radius: 25px;
+}
+#x:hover{
+    background-color: red;
+    color: white;
+}
+#message{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding-top: 25px;
+}
+#warningMsg{
+    color: black;
+    font-weight: normal;
+    position: relative;
+    left: 2px;
+    max-width: 290px;
+    justify-content: center;
+}
+#deleteButtons{
+    display: flex;
+    justify-content: center;
+    gap: 19px;
+    height: 30px;
+}
+#yes,#no{
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    width: 45px;
+    font-weight: bold;
+}
+#yes{
+    outline: 1px dotted blue;
+}
+#yes:hover{
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+}
+#no{
+    outline: 1px dotted black;
+}
+#no:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+.deleteBlock img{
+    position: relative;
+    right: 0;
+    width: 40px;
+    height: 40px;
+}
