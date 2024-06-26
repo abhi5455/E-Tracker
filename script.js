@@ -114,6 +114,30 @@ threelines.addEventListener('click', function(){
 
 function revertBody(){
     document.getElementById('pseudoBox').style.display="none";
+
+    //document.getElementById('name').style.color = 'black';
+    //document.getElementById('name').style.fontWeight = 'normal';
+    //document.getElementById('name').style.fontSize = 'large';
+    document.getElementById('name').style.fontFamily = 'Arial';
+    document.getElementById('amount').style.fontWeight = 'normal';
+    document.getElementById('amount').style.color = 'black';
+    document.getElementById('amount').style.fontSize = 'large';
+    document.getElementById('amount').style.fontFamily = 'Arial';
+    document.getElementById('groupName').style.fontWeight = 'normal';
+    document.getElementById('groupName').style.fontSize = 'large';
+    document.querySelector('label').style.fontSize = 'large';
+    //document.getElementById('groupName').style.fontFamily = 'Arial';
+    //document.getElementById('groupName').style.fontWeight = 'normal';
+    //document.getElementById('description').style.color = 'black';
+    document.getElementById('description').style.fontSize = 'large';
+    //document.getElementById('description').style.fontFamily = 'Arial';
+
+    for (let i = 0; i < calcExpPopupLabels.length; i++) {
+        calcExpPopupLabels[i].style.color = 'black';
+        calcExpPopupLabels[i].style.fontSize = 'large';
+        calcExpPopupLabels[i].style.fontFamily = 'Calibri';
+    }
+
     okCancelButton.style.display = 'none';
     deleteButton.style.display = 'none';
     okButton.style.display = 'block';
