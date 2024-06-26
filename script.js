@@ -127,4 +127,8 @@ function revertBody(){
 }
 function blurBody(){
     document.getElementById('pseudoBox').style.display="block";
+    document.getElementById('pseudoBox').style.height = document.body.clientHeight + 'px';
+    window.addEventListener('resize', function (){
+        document.getElementById('pseudoBox').style.height = document.body.clientHeight + 'px';
+    })
 }
