@@ -120,6 +120,10 @@ function revertBody(){
     cancelButton.style.display = 'block';
     document.getElementById('error').style.display = 'none';
     document.getElementById('error1').style.display = 'none';
+    document.getElementById('name').readOnly = false;
+    document.getElementById('amount').readOnly = false;
+    document.getElementById('category').readOnly = false;
+    document.getElementById('description').readOnly = false;
 }
 function blurBody(){
     document.getElementById('pseudoBox').style.display="block";
