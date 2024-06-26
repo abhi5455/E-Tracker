@@ -89,17 +89,17 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
     if (flag === true) {
         document.getElementById('name').style.color = 'black';
         document.getElementById('name').style.fontWeight = 'normal';
-        document.getElementById('name').style.fontSize = 'large';
-        document.getElementById('name').style.fontFamily = 'Century Schoolbook';
+        document.getElementById('name').style.fontSize = '20x';
+        document.getElementById('name').style.fontFamily = 'Arial';
         document.getElementById('amount').style.fontWeight = 'bold';
         document.getElementById('amount').style.color = '#A91B0D';
         document.getElementById('amount').style.fontSize = 'x-large';
         document.getElementById('amount').style.fontFamily = 'Century Schoolbook';
-        document.getElementById('groupName').style.fontWeight = 'bold';
-        document.getElementById('groupName').style.fontSize = '17px';
+        document.getElementById('category').style.fontWeight = 'bold';
+        document.getElementById('category').style.fontSize = '17px';
         document.querySelector('label').style.fontSize = '15px';
-        document.getElementById('groupName').style.fontFamily = 'Arial';
-        document.getElementById('groupName').style.fontWeight = 'normal';
+        document.getElementById('category').style.fontFamily = 'Arial';
+        document.getElementById('category').style.fontWeight = 'normal';
         document.getElementById('description').style.color = 'black';
         document.getElementById('description').style.fontSize = '16px';
         document.getElementById('description').style.fontFamily = 'Arial';
@@ -130,9 +130,10 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
             for(let i=0;i<calcExpPopupInputs.length;i++) {
                 calcExpPopupInputs[i].style.fontSize = '17px';
             }
-            document.getElementById('description').style.fontSize = '15px';
-            document.getElementById('name').style.fontSize = '18px';
+            document.getElementById('name').style.fontSize = '19px';
             document.getElementById('amount').style.fontSize = '19px';
+            document.getElementById('category').style.fontSize = '16px';
+            document.getElementById('description').style.fontSize = '15px';
         }
         document.getElementById('description').style.pointerEvents = "auto";
         document.getElementById('description').style.cursor = "default";

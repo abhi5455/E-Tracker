@@ -125,8 +125,8 @@ function revertBody(){
     document.getElementById('amount').style.color = 'black';
     document.getElementById('amount').style.fontSize = 'large';
     document.getElementById('amount').style.fontFamily = 'Arial';
-    document.getElementById('groupName').style.fontWeight = 'normal';
-    document.getElementById('groupName').style.fontSize = 'large';
+    document.getElementById('category').style.fontWeight = 'normal';
+    document.getElementById('category').style.fontSize = 'large';
     document.querySelector('label').style.fontSize = 'large';
     document.getElementById('description').style.fontSize = 'large';
 
