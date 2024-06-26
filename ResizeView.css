@@ -1,7 +1,4 @@
 @media(max-width: 690px){
-    {
-        outline: 1px solid red;
-    }
     html{
         overflow-x: hidden;
         background-color: white;
@@ -91,7 +88,11 @@
         font-family: "EB Garamond" ,sans-serif;
     }
     #expenseFooter{
-        top: 53px;
+        top: 54px;
+        right: 5px;
+        font-size: 11px;
+        width: 80px;
+        min-width: 80px;
     }
     #month-year{
         font-family: "Century Schoolbook", sans-serif !important;
