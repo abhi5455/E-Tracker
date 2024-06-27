@@ -1,0 +1,180 @@
+{
+    outline: 2px solid red
+}
+*{
+    scrollbar-color: darkgray transparent;
+    scrollbar-width: thin;
+}
+body{
+    background-color: white;
+    overflow-x: hidden;
+    user-select: none;
+}
+#vp1{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, deepskyblue, aqua );
+    font-family: Calibri, sans-serif;
+    position: relative;
+    left: -8px;
+    top: -30px
+}
+nav{
+    background-color:rgb(255,255,255,.9);
+    width:100%;
+    height:60px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+#logo{
+    position: absolute;
+    left: 40px;
+    height: 30px;
+    width: 30px;
+    opacity: 0.85;
+}
+nav h3{
+    position: absolute;
+    left: 80px;
+    opacity: .3;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+}
+.Name{
+    position: relative;
+    top: 250px;
+    left: 7%;
+    font-family: Calibri, sans-serif;
+    width: 50%;
+}
+.Name h1{
+    font-size: 50px;
+    background: linear-gradient(45deg,midnightblue,darkblue,black,hotpink);
+    background-clip: text;
+    color: transparent;
+}
+.Name h2{
+    font-size: 42px;
+    position: relative;
+    top: -20px;
+}
+.Name p{
+    position: relative;
+    top: -40px;
+    width: 80%;
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+#signIn{
+    position: fixed;
+    right: 5%;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: red;
+}
+#signIn:hover {
+    cursor: pointer;
+    color: #A91B0D;
+}
+#user-interact-header{
+    position: absolute;
+    top: 160px;
+    right: 190px;
+    font-size: 26px;
+    font-family: Calibri, sans-serif;
+}
+.user-interact{
+    position: absolute;
+    top: 245px;
+    right: 7.5%;
+    align-items: center;
+    height: 260px;
+    width: 350px;
+}
+#name{
+    position: relative;
+    width: 97%;
+}
+#email{
+    position: relative;
+    top: 20px;
+    width: 97%;
+}
+#password{
+    position: relative;
+    top: 40px;
+    width: 97%;
+}
+#phoneNumberBlock{
+    position: relative;
+    top: 60px;
+}
+#signInAlternate{
+    position: relative;
+    top: 25px;
+    color: blue;
+    display: none;
+}
+form p{
+    text-align: center;
+}
+#signInAlternate:hover{
+    cursor: pointer;
+    color: #A91B0D;
+}
+.input{
+    height: 45px;
+    width: 85%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.input::placeholder{
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+form button{
+    position: absolute;
+    top: 280px;
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color: orangered;
+    color: white;
+}
+form button:hover{
+    cursor: pointer;
+    background-color: #A91B0D;
+    transition: background-color 500ms;
+}
+.sampleImages{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    height: 610px;
+}
+#sampleImage1{
+    top: 75%;
+}
+#sampleImage2{
+    top: 78%;
+}
+#sampleImage3{
+    top: 81%;
+    padding-bottom: 50px;
+}
+.img{
+    width: 82%;
+    outline: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 30px floralwhite;
+}
