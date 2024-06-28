@@ -158,6 +158,18 @@ form button:hover{
 #eyeOpen{
     display: none;
 }
+#eyeOpen:hover, #eyeClose:hover{
+    cursor: pointer;
+}
+
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none;
+}
+/* Hide the eye icon in password fields for Edge */
+input[type="password"]::-ms-reveal {
+    display: none;
+}
+
 @media(max-width: 1000px){
     .Name h2{
         font-size: 36px;
@@ -219,6 +231,9 @@ form button:hover{
     #vp1{
         height: 850px;
     }
+    body{
+        background: linear-gradient(to bottom, aqua, lightskyblue, aqua);
+    }
     .Name{
         width: 400px;
         left: calc(50% - 200px);
@@ -226,7 +241,7 @@ form button:hover{
     }
     .Name h1{
         font-size: 35px;
-        background: linear-gradient(45deg,#070214 2%,blue,#070214 20%, midnightblue,black);
+        background: linear-gradient(45deg,midnightblue,darkblue,#070214, midnightblue,red);
         background-clip: text;
     }
     .Name h2{
@@ -254,6 +269,7 @@ form button:hover{
     .input, #india, #password{
         outline: 1px solid black;
     }
+
     #signIn{
         font-size: 13px;
     }
