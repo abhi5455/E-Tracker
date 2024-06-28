@@ -116,7 +116,7 @@ nav h3{
     position: relative;
     top: 60px;
 }
-#signInAlternate{
+#signInAlternate, #forgotPassword{
     position: relative;
     top: 25px;
     color: blue;
@@ -125,7 +125,7 @@ nav h3{
 form p{
     text-align: center;
 }
-#signInAlternate:hover{
+#signInAlternate:hover, #forgotPassword:hover{
     cursor: pointer;
 }
 .input{
@@ -280,7 +280,7 @@ input[type="password"]::-ms-reveal {
     #signIn{
         font-size: 13px;
     }
-    #signInAlternate{
+    #signInAlternate, #forgotPassword{
         top: 35px;
         font-size: 13px;
     }

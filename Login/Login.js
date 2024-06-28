@@ -2,13 +2,14 @@ let signIn=document.getElementById("signIn");
 let signInFlag=true;
 let emailLogInFlag=true;
 let submitButton=document.getElementById("submitButton");
-let userInteract=document.getElementById("user-interact");
+let userInteractHeader=document.getElementById("user-interact-header");
 let name=document.getElementById("name");
 let email=document.getElementById("email");
 let password=document.getElementById("password");
 let phoneNumber=document.getElementById("phoneNumber");
 let phoneNumberBlock=document.getElementById("phoneNumberBlock");
 let signInAlternate=document.getElementById("signInAlternate");
+let forgotPassword=document.getElementById("forgotPassword");
 let eyeOpen=document.getElementById("eyeOpen");
 let eyeClose=document.getElementById("eyeClose");
 let eyeLabel=document.getElementById("eyeLabel");
@@ -24,8 +25,10 @@ signIn.addEventListener("click", function(){
         email.style.top="5px";
         password.style.top="25px";
         signInAlternate.style.display="block";
-        submitButton.style.top="175px";
+        forgotPassword.style.display="block";
+        submitButton.style.top="205px";
         console.log(phoneNumberBlock.style.order);
+        userInteractHeader.textContent="Resume your Tracking";
     }
     else{
         signInFlag=true;
@@ -35,11 +38,13 @@ signIn.addEventListener("click", function(){
         email.style.display="block";
         phoneNumberBlock.style.display="flex";
         signInAlternate.style.display="none";
+        forgotPassword.style.display="none";
         submitButton.style.top="280px";
         name.style.top="0";
         email.style.top="20px";
         password.style.top="40px";
         phoneNumberBlock.style.top="60px";
+        userInteractHeader.textContent="Start your Tracking";
     }
 })
 
@@ -51,9 +56,11 @@ signInAlternate.addEventListener("click", function(){
         phoneNumberBlock.style.top="-50px";
         password.style.top="70px";
         signInAlternate.style.top="18px";
+        forgotPassword.style.top="18px";
         emailLogInFlag=false;
         if(window.matchMedia("(max-width: 550px)").matches){
-            signInAlternate.style.top="28px"
+            signInAlternate.style.top="28px";
+            forgotPassword.style.top="28px";
         }
     }
     else{
@@ -62,10 +69,12 @@ signInAlternate.addEventListener("click", function(){
         phoneNumberBlock.style.display="none";
         email.style.top="5px";
         password.style.top="25px";
-        signInAlternate.style.top="25px"
+        signInAlternate.style.top="25px";
+        forgotPassword.style.top="25px";
         emailLogInFlag=true;
         if(window.matchMedia("(max-width: 550px)").matches){
-            signInAlternate.style.top="35px"
+            signInAlternate.style.top="35px";
+            forgotPassword.style.top="35px";
         }
     }
 })
