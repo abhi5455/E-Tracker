@@ -8,11 +8,11 @@
 body{
     overflow-x: hidden;
     user-select: none;
-    height: 75vh;
+    height: 90vh;
     background: linear-gradient(to bottom, aqua, aqua );
 }
 #vp1{
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     background: linear-gradient(to bottom, deepskyblue, aqua );
     font-family: Calibri, sans-serif;
