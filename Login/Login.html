@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0, user-scalable=yes">
     <title>Expense Tracker/Login</title>
     <link rel="stylesheet" href="Login.css">
 </head>
@@ -28,22 +28,12 @@
                 <label for="password"></label>
                 <input type="password" id="password" class="input" placeholder="password *" required/>
                 <div id="phoneNumberBlock" style="display: flex; flex-direction: row; width: 100% ; margin-top: 7px;">
-                    <label for="phoneNumber" style="background-color: white; border-right: 1px solid darkgrey; width: 50px; display: flex; align-items: center;justify-content: center">+91</label>
+                    <label for="phoneNumber" style="background-color: white; border-right: 1px solid darkgrey; width: 50px; display: flex; align-items: center;justify-content: center;" id="india">+91</label>
                     <input id="phoneNumber" type="number" class="input" placeholder="phonenumber" required/>
                 </div>
                 <p id="signInAlternate">Sign In using Phone Number</p>
                 <button type="submit" id="submitButton">SIGN UP</button>
             </form>
-        </div>
-        <p style="position: relative; top:570px; left: 7%;font-size: 35px">Sample Images -</p>
-        <div class="sampleImages" id="sampleImage1">
-            <img src="sampleImg1.png" alt="sample1" class="img">
-        </div>
-        <div class="sampleImages" id="sampleImage2">
-            <img src="sampleImg2.png" alt="sample1" class="img">
-        </div>
-        <div class="sampleImages" id="sampleImage3">
-            <img src="sampleImg3.png" alt="sample1" class="img">
         </div>
     </div>
 </body>
