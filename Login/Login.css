@@ -219,10 +219,12 @@ form button:hover{
     .Name{
         width: 400px;
         left: calc(50% - 200px);
-        top: 170px;
+        top: 200px;
     }
     .Name h1{
         font-size: 35px;
+        background: linear-gradient(45deg,#070214 2%,blue,#070214 20%, midnightblue,black);
+        background-clip: text;
     }
     .Name h2{
         top: -15px;
@@ -235,13 +237,13 @@ form button:hover{
         padding-right: 35px;
         width: 82.5%;
         text-align: center;
+        font-weight: normal;
     }
     #user-interact-header{
         top: 180px;
         font-size: 17px;
         font-weight: normal;
         text-transform: uppercase;
-        text-underline: #080808;
     }
     #subHeading{
         top: 700px;
@@ -250,6 +252,10 @@ form button:hover{
         outline: 1px solid black;
     }
     #signIn{
+        font-size: 13px;
+    }
+    #signInAlternate{
+        top: 35px;
         font-size: 13px;
     }
 }

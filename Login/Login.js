@@ -48,6 +48,9 @@ signInAlternate.addEventListener("click", function(){
         password.style.top="70px";
         signInAlternate.style.top="18px";
         emailLogInFlag=false;
+        if(window.matchMedia("(max-width: 550px)").matches){
+            signInAlternate.style.top="28px"
+        }
     }
     else{
         signInAlternate.textContent="Sign In using Phone Number";
@@ -57,6 +60,9 @@ signInAlternate.addEventListener("click", function(){
         password.style.top="25px";
         signInAlternate.style.top="25px"
         emailLogInFlag=true;
+        if(window.matchMedia("(max-width: 550px)").matches){
+            signInAlternate.style.top="35px"
+        }
     }
 })
 
