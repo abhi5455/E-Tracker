@@ -136,7 +136,6 @@ form p{
     outline: none;
     font-size: 16px;
     padding-left: 10px;
-    /*outline: 1px solid black;*/
 }
 .input::placeholder{
     font-size: 15px;
@@ -191,9 +190,6 @@ form button:hover{
         left: calc(50% - 350px);
         text-align: center;
     }
-    .img{
-        width: 90%;
-    }
 }
 @media(max-width: 700px){
     .Name{
@@ -242,10 +238,10 @@ form button:hover{
     }
     #user-interact-header{
         top: 180px;
-        font-size: 18px;
-    }
-    .user-interact-box{
-        top: 200px;
+        font-size: 17px;
+        font-weight: normal;
+        text-transform: uppercase;
+        text-underline: #080808;
     }
     #subHeading{
         top: 700px;

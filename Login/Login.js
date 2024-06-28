@@ -9,7 +9,6 @@ let password=document.getElementById("password");
 let phoneNumber=document.getElementById("phoneNumber");
 let phoneNumberBlock=document.getElementById("phoneNumberBlock");
 let signInAlternate=document.getElementById("signInAlternate");
-let vp1=document.getElementById("vp1");
 
 signIn.addEventListener("click", function(){
     if(signInFlag){
