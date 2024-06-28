@@ -154,6 +154,13 @@ form button:hover{
     background-color: #A91B0D;
     transition: background-color 500ms;
 }
+#noAccount{
+    position: absolute;
+    width: 100%;
+    color: darkred;
+    top: 325px;
+    display: none;
+}
 #eyeOpen{
     display: none;
 }
@@ -232,6 +239,7 @@ input[type="password"]::-ms-reveal {
     }
     body{
         background: linear-gradient(to bottom, aqua, lightskyblue, aqua);
+        height: 105vh;
     }
     .Name{
         width: 400px;
