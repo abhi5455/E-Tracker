@@ -155,6 +155,9 @@ form button:hover{
     background-color: #A91B0D;
     transition: background-color 500ms;
 }
+#eyeOpen{
+    display: none;
+}
 @media(max-width: 1000px){
     .Name h2{
         font-size: 36px;
@@ -248,7 +251,7 @@ form button:hover{
     #subHeading{
         top: 700px;
     }
-    .input, #india{
+    .input, #india, #password{
         outline: 1px solid black;
     }
     #signIn{
