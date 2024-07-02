@@ -154,3 +154,13 @@ function blurBody(){
         document.getElementById('pseudoBox').style.height = document.body.clientHeight + 'px';
     })
 }
+
+let pseudoBox=document.getElementById('pseudoBox');
+pseudoBox.addEventListener('click',function(){
+    revertBody();
+    calcExpPopup.style.display = 'none';
+    computePopup.style.display="none";
+    searchBy.style.display="block";
+    document.getElementById("groupName").value="";
+    document.getElementById("searchByLabel").style.display="none";
+})

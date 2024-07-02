@@ -15,6 +15,7 @@ popupCancelButton.addEventListener('click',function(){
     revertBody();
     computePopup.style.display="none";
     searchBy.style.display="block";
+    document.getElementById("groupName").value="";
     document.getElementById("searchByLabel").style.display="none";
 });
 popupComputeButton.addEventListener('click',function(){
