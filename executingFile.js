@@ -13,15 +13,16 @@ function clearContainer2(){
     }
 }
 
-function updateDetails()
+function updateDetails(userSelectDate)
 {
     clearContainer2();
     if(x===1) {
-        addExpense("FoodExpense", "1000", "Food", "Spent During Dinner with Friends");
-        addExpense("Outing", "2500", "Fun", "Alappuzha Beach");
-        addExpense("Groceries", "500", "MonthlyExpense", "Home");
-        addExpense("Vegetables", "1200", "", "Home");
+        addExpense(getTimeStamp(),userSelectDate,"FoodExpense", "1000", "Food", "Spent During Dinner with Friends");
+        addExpense(getTimeStamp(),userSelectDate,"Outing", "2500", "Fun", "Alappuzha Beach");
+        addExpense(getTimeStamp(),userSelectDate,"Groceries", "500", "MonthlyExpense", "Home");
+        addExpense(getTimeStamp(),userSelectDate,"Vegetables", "1200", "", "Home");
         /*openPopup("Food","1000","efwygidcsuhcb",true);/**/
         x++;
     }
+    retrieveExpense(userSelectDate);
 }

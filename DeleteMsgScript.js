@@ -21,6 +21,7 @@ function askToDelete(a) {
     });
     document.getElementById('yes').addEventListener('click', function () {
         deleteExpense();
+        deleteStoredExpense(clickedExpenseOriginalId);
         deleteMsg.style.display = "none";
         revertBody();
     })

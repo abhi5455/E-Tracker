@@ -5,7 +5,7 @@ body{
     margin: 0;
 }
 *{
-    scrollbar-width: thin;
+    scrollbar-width: none;
 }
 header{
     display: flex;
@@ -110,6 +110,7 @@ header{
     height: 46px;
 }
 #showEstimate{
+    overflow: scroll;
     position: absolute;
     top: 481px;
     width: 250px;
@@ -132,6 +133,8 @@ header{
         position: relative;
         top: 5px;
         color: red;
+    }
+    #showCategory{
     }
     display: none;
 }
@@ -219,7 +222,7 @@ header{
 .expense:hover, .threeLines:hover, .personInfo:hover, .info:hover{
     cursor: pointer;
     transform: scale(1.01);
-    transition: transform 0ms;
+    transition: transform 150ms ease-in-out;
 }
 .labelValue:hover, .label11:hover, .label12:hover{
     cursor: pointer;

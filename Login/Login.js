@@ -17,6 +17,8 @@ let eyeCloseFlag=true;
 
 signIn.addEventListener("click", function(){
     if(signInFlag){
+        document.getElementById('name').required=false;
+        document.getElementById('phoneNumber').required=false;
         signInFlag=false;
         signIn.textContent="SIGN UP";
         submitButton.textContent="SIGN IN";
@@ -31,6 +33,8 @@ signIn.addEventListener("click", function(){
         userInteractHeader.textContent="Resume your Tracking";
     }
     else{
+        document.getElementById('name').required=true;
+        document.getElementById('phoneNumber').required=true;
         signInFlag=true;
         signIn.textContent="SIGN IN";
         submitButton.textContent="SIGN UP";

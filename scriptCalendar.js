@@ -172,7 +172,6 @@ for(let i=1;i<=dateNumbers.length;i++){
 function dateNumbersClick(){
 
     noExpenseText.style.display="flex";
-    updateDetails();
 
     let clickedElement=event.target;
     if(clickedElement.textContent===""){
@@ -182,6 +181,9 @@ function dateNumbersClick(){
     alertDateFormat=str;
     userSelectDate=clickedElement.textContent+" "+calendarMonth+" "+calendarYear.toString();
     console.log("UserSelectDate " + userSelectDate);
+
+    updateDetails(userSelectDate);
+
     dateUpdate.textContent=str;
     headerMonth=dateUpdate.textContent.split(" ")[0];
     headerYear=dateUpdate.textContent.split(", ")[1];

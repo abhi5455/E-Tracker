@@ -28,20 +28,19 @@ let clickedExpense;
 let clickedExpenseOriginalId;
 
 
-function addExpense(name,amount,groupName,description){
+function addExpense(id,date,name,amount,groupName,description){
 
     noExpenseText.style.display="none";
-
     let expense=document.getElementById('expenseMsg');
     let newExpense=expense.cloneNode(true);
     newExpense.style.display="flex";
     let lastElement=document.getElementById('addNew');
-    /*Need to edit*/newExpense.id=getTimeStamp();
+    /*Need to edit*/newExpense.id=id;
     newExpense.querySelector('#label1').textContent=name;
     newExpense.querySelector('#label2').textContent="₹"+amount;
     newExpense.querySelector('#label3').textContent=description;
     newExpense.querySelector('#label4').textContent=groupName;
-    newExpense.querySelector('#expenseFooter').textContent=userSelectDate;
+    newExpense.querySelector('#expenseFooter').textContent=date;
     container2.insertBefore(newExpense,lastElement);
     let expenses=document.getElementsByClassName('expense');
     for(let i=0;i<expenses.length;i++) {
@@ -68,6 +67,8 @@ function addExpense(name,amount,groupName,description){
     for(let i=0;i<expenseLabel11.length;i++) {
         expenseLabel11[i].style.fontSize="22px";
     }
+
+    return newExpense.id;
 }
 
 function deleteExpense(){

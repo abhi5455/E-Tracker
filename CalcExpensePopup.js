@@ -56,7 +56,10 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
         let addExpenseFlag = okButtonFlag();
         if (!addExpenseFlag)
             return;
-        addExpense(document.getElementById('name').value, document.getElementById('amount').value, document.getElementById('category').value, document.getElementById('description').value);
+        let id = getTimeStamp();
+        addExpense(id, userSelectDate,document.getElementById('name').value, document.getElementById('amount').value, document.getElementById('category').value, document.getElementById('description').value);
+        storeExpense(id, userSelectDate,document.getElementById('name').value, document.getElementById('amount').value, document.getElementById('category').value, document.getElementById('description').value);
+
         revertBody();
         calcExpPopup.style.display = 'none';
     })

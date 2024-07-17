@@ -26,14 +26,26 @@ popupComputeButton.addEventListener('click',function(){
     let noOfDays=(date1-date2)/(1000 * 3600 * 24);
     if(noOfDays<0){
         noOfDays*=-1;
-        from.textContent=" \u00A0 From: \u00A0\u00A0\u00A0"+endDate.value;
-        to.textContent=" \u00A0 To: \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"+startDate.value;
+        let temp=startDate.value;
+        startDate.value=endDate.value;
+        endDate.value=temp;
+        from.textContent=" \u00A0 From: \u00A0\u00A0\u00A0"+startDate.value;
+        to.textContent=" \u00A0 To: \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"+endDate.value;
     }
     else if(isNaN(noOfDays)){
         noOfDays=0;
     }
+    let totalExpenseAmount;
+    totalExpenseAmount = retrieveComputedExpense(startDate.value,endDate.value,document.getElementById('groupName').value.trim());
+
     noOfDays++;
+    document.getElementById('showCategory').textContent="\u00A0 Category: \u00A0\u00A0\" "+document.getElementById('groupName').value.trim().toLowerCase()+" \"";
+    if(document.getElementById('groupName').value.trim()===""){
+        document.getElementById('showCategory').textContent="\u00A0 Category: \u00A0\u00A0Not Considered";
+    }
+    document.getElementById('groupName').value="";
     days.textContent="\u00A0 No of Days: \u00A0\u00A0"+noOfDays;
+    document.getElementById("expense").textContent="₹"+totalExpenseAmount+" /-";
     showEstimate.style.display="block";
     revertBody();
     computePopup.style.display="none";
