@@ -1,0 +1,44 @@
+#emailLoggedin{
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: white;
+    border-radius: 10px;
+    height: 130px;
+    width: 400px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+    font-family: Calibri;
+    color: darkslategrey;
+    z-index: 9980;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: 1px solid dimgrey;
+    display: none;
+}
+#emailLoggedinDisplay{
+    margin-top: -7px;
+    height: 25px;
+    background-color: lightgray;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 5px;
+    color: dodgerblue;
+}
+#emailLoggedinLogout{
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    height: 25px;
+    width: 90px;
+    padding-top: 2px;
+    position: relative;
+    top: 11px;
+    left: calc(50% - 45px);
+}
+#emailLoggedinLogout:hover{
+    transform: scale(1.04);
+    transition: transform 120ms ,background-color 0ms;
+    cursor: pointer;
+}

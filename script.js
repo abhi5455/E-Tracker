@@ -120,6 +120,7 @@ threelines.addEventListener('click', function(){
 
 function revertBody(){
     document.getElementById('pseudoBox').style.display="none";
+    document.getElementById('emailLoggedin').style.display="none";
 
     document.getElementById('name').style.fontFamily = 'Arial';
     document.getElementById('amount').style.fontWeight = 'normal';
@@ -164,4 +165,17 @@ pseudoBox.addEventListener('click',function(){
     searchBy.style.display="block";
     document.getElementById("groupName").value="";
     document.getElementById("searchByLabel").style.display="none";
+})
+
+
+let personInfo=document.getElementById('personInfo');
+personInfo.addEventListener('click',function(){
+    let showLoggedEmail=document.getElementById('emailLoggedin');
+    showLoggedEmail.style.display="block";
+    pseudoBox.style.display="block";
+})
+
+//Update Logged Email
+window.addEventListener('load', function(){
+    document.getElementById('emailLoggedinDisplay').textContent=JSON.parse(localStorage.getItem("currentEmail"));
 })
