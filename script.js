@@ -59,7 +59,7 @@ function addExpense(id,date,name,amount,groupName,description){
             if(groupName===""){
                 groupName= "No Category Added";
             }
-            openPopup(nameId,amount,groupName,description,true);
+            openPopup(clickedExpenseOriginalId, nameId,amount,groupName,description,true);
         });
     }
 
@@ -79,7 +79,7 @@ function deleteExpense(){
 let plusButton=document.getElementById('plus');
 plusButton.addEventListener('click',function(){
 
-    openPopup(nameId, amountExpense, groupName, description,flag);
+    openPopup("",nameId, amountExpense, groupName, description,flag);
 })
 
 

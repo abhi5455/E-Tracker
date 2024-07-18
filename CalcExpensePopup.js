@@ -26,7 +26,7 @@ let deleteButton = document.getElementById('delete');
 let calcExpPopupLabels=document.getElementsByClassName('popUplabel');
 let calcExpPopupInputs=document.getElementsByClassName('popupInputs');
 
-function openPopup(nameId, amountExpense, groupName, description,flag) {
+function openPopup(expenseId, nameId, amountExpense, groupName, description,flag) {
     blurBody();
     calcExpPopup.style.display="block";
 
@@ -90,6 +90,9 @@ function openPopup(nameId, amountExpense, groupName, description,flag) {
     document.getElementById('description').value = description;
 
     if (flag === true) {
+        //alertDate.textContent = alertDateFormat;
+        updateAlertDate(clickedExpenseOriginalId)
+
         document.getElementById('name').style.color = 'black';
         document.getElementById('name').style.fontWeight = 'normal';
         document.getElementById('name').style.fontSize = '20x';

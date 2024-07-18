@@ -116,3 +116,16 @@ console.log("Category-> ",Category)
     }
     return totalExpenseAmount;
 }
+
+function updateAlertDate(id){
+    let userIndex=getUserIndex();
+    Users=JSON.parse(localStorage.getItem("Users"));
+    for (let i = 0; i < Users[userIndex].expenseData.length; i++) {
+        if (Users[userIndex].expenseData[i].expenseId===id){
+            let alertDate = document.getElementById('alertDate');
+            alertDate.textContent=Users[userIndex].expenseData[i].expenseDate;
+            console.log(alertDate.textContent);
+            break;
+        }
+    }
+}

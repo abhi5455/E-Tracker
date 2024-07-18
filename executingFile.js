@@ -15,6 +15,7 @@ function clearContainer2(){
 
 function updateDetails(userSelectDate)
 {
+    showEstimate.style.display="none";
     clearContainer2();
     if(x===1) {
         addExpense(getTimeStamp(),userSelectDate,"FoodExpense", "1000", "Food", "Spent During Dinner with Friends");
