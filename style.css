@@ -104,6 +104,7 @@ header{
 .calculateExpense:hover{
     cursor: pointer;
     transform: scale(1.05);
+    transition: transform 150ms ease-in-out;
 }
 #calculateExpenseImg{
     width: 45px;
