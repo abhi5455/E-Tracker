@@ -171,6 +171,7 @@ for(let i=1;i<=dateNumbers.length;i++){
 }
 function dateNumbersClick(){
 
+    noExpenseText.textContent="No Expenses Added Yet !"
     noExpenseText.style.display="flex";
 
     let clickedElement=event.target;
@@ -218,6 +219,8 @@ function changeYearsClick(direction){
         currentClickDate.style.backgroundColor="white";
     }
 }
+
+
 
 function addRedDot(){
     let newElement=document.createElement('div');

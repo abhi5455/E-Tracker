@@ -19,6 +19,8 @@ popupCancelButton.addEventListener('click',function(){
     document.getElementById("searchByLabel").style.display="none";
 });
 popupComputeButton.addEventListener('click',function(){
+    noExpenseText.textContent="No Computed Expenses !"
+    noExpenseText.style.display="flex";
     from.textContent=" \u00A0 From: \u00A0\u00A0\u00A0"+startDate.value;
     to.textContent=" \u00A0 To: \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"+endDate.value;
     let date1=new Date(endDate.value);
