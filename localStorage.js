@@ -58,6 +58,9 @@ function storeExpense(id,date,name,amount,category,description){
     Users[userIndex].expenseData.push(expenseData);
     localStorage.setItem("Users",JSON.stringify(Users));
 
+    //For setting redDot
+    changeCalendarLeft();
+    changeCalendarRight();
     /*for (let i = 0; i < Users[userIndex].expenseData.length; i++) {
         console.log(JSON.stringify(Users[userIndex].expenseData[i]));
     }*/
