@@ -89,6 +89,9 @@ function deleteStoredExpense(ExpenseId){
     //console.log(ExpenseId);
     localStorage.setItem("Users",JSON.stringify(Users));
 
+    //For setting redDot
+    changeCalendarLeft();
+    changeCalendarRight();
 }
 
 function retrieveComputedExpense(startDate,endDate,Category){
