@@ -7,7 +7,7 @@
     top: calc(50% - 293px);
     left: calc(50% - 293px);
     background: linear-gradient(45deg, rgb(0, 191, 255,0.8), rgb(211, 211, 211, 0.8));
-    border-radius: 50px;
+    border-radius: 30px;
     z-index: 510;
     display: none;
 }
@@ -76,7 +76,6 @@ textarea::placeholder{
     border: none;
     border-radius: 10px;
     width: 100px;
-    margin-right: 20px;
     background-color: blue;
     color: white;
     font-weight: bold;
@@ -88,23 +87,27 @@ textarea::placeholder{
     border-radius: 10px;
     width: 100px;
     margin-right: 20px;
-    background-color: blue;
-    color: white;
+    color: blue;
     font-weight: bold;
     font-size: 18px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     display: none;
 }
+#cancel{
+    color: blue;
+    margin-right: 20px;
+}
 #cancel, #delete{
     border: none;
     border-radius: 10px;
     width: 100px;
-    color: blue;
     font-weight: bold;
     font-size: large;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 #delete{
+    color: white;
+    background-color: blue;
     display: none;
 }
 #ok:hover, #cancel:hover, #okCancel:hover, #delete:hover{
