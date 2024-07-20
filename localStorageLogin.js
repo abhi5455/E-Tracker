@@ -69,7 +69,4 @@ document.getElementById('user-interact').addEventListener("submit", function(e){
             window.alert("User not found!");
         }
     }
-    for(let i=0;i<Users.length;i++) {
-        console.log(Users[i])
-    }
 })

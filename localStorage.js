@@ -58,9 +58,9 @@ function storeExpense(id,date,name,amount,category,description){
     Users[userIndex].expenseData.push(expenseData);
     localStorage.setItem("Users",JSON.stringify(Users));
 
-    for (let i = 0; i < Users[userIndex].expenseData.length; i++) {
+    /*for (let i = 0; i < Users[userIndex].expenseData.length; i++) {
         console.log(JSON.stringify(Users[userIndex].expenseData[i]));
-    }
+    }*/
 }
 
 function retrieveExpense(UserSelectDate){
@@ -83,7 +83,7 @@ function deleteStoredExpense(ExpenseId){
                 Users[userIndex].expenseData.splice(i,1);
         }
     }
-    console.log(ExpenseId);
+    //console.log(ExpenseId);
     localStorage.setItem("Users",JSON.stringify(Users));
 
 }
@@ -123,7 +123,6 @@ function updateAlertDate(id){
         if (Users[userIndex].expenseData[i].expenseId===id){
             let alertDate = document.getElementById('alertDate');
             alertDate.textContent=Users[userIndex].expenseData[i].expenseDate;
-            console.log(alertDate.textContent);
             break;
         }
     }

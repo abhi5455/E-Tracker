@@ -104,7 +104,7 @@ function zellersCongruence(day,month,year){
     if(month<3){
         month+=12;
         year--;
-        console.log(month,year);
+        //console.log(month,year);
     }
     let K = year % 100;
     let J = Math.floor(year / 100);

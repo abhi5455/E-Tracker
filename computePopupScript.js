@@ -9,7 +9,6 @@ function computePopupSetPos() {
     computePopup.style.left = ((container1.offsetWidth) + ((container2.offsetWidth - 350) / 2) - 2).toString() + "px";
     resizeComputePopup();
     //computePopup.style.left = (((container1.offsetWidth+container2.offsetWidth - 350) / 2) - 2).toString() + "px";
-    console.log(startDate.value,endDate.value);
 }
 popupCancelButton.addEventListener('click',function(){
     revertBody();
@@ -53,7 +52,6 @@ popupComputeButton.addEventListener('click',function(){
     computePopup.style.display="none";
     searchBy.style.display="block";
     document.getElementById("searchByLabel").style.display="none";
-    console.log(userSelectDate);
 })
 
 window.addEventListener('resize',computePopupSetPos);
