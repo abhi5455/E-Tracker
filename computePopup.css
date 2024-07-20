@@ -34,7 +34,6 @@
     border: none;
     border-radius: 10px;
     width: 100px;
-    margin-right: 20px;
     background-color: blue;
     height: 40px;
     color: white;
@@ -45,6 +44,7 @@
 #popupCancelButton{
     border: none;
     border-radius: 10px;
+    margin-right: 20px;
     width: 100px;
     height: 40px;
     color: blue;
