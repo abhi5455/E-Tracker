@@ -18,7 +18,7 @@
 let Users=[
     {
         name:"xyz",
-        email: "abc@rit.ac.in",
+        email: "abc@gmail.com",
         password: "xyz123",
         phoneNumber: "9020504012",
         expenseData: []
