@@ -59,13 +59,17 @@ function setDate(currentMonth, currentYear){
     if(((currentYear % 4 === 0 && currentYear % 100 !== 0) || (currentYear % 400 === 0)) && currentMonth===2){
         limit=29;
     }
+    clearRedDot();
     for(let i=1;i<=limit;i++)
     {
         let firstDay=document.getElementById(day.toString());
         firstDay.textContent=i.toString();
-        /* Adding the redDot
-        let newElement=addRedDot();
-        firstDay.appendChild(newElement);/**/
+        /* Adding the redDot*/
+        if(redDotRequired(i,currentMonth,currentYear)) {
+            let newElement = addRedDot();
+            firstDay.appendChild(newElement);/**/
+        }
+
         firstDay.addEventListener('mouseenter',function () {
             firstDay.style.backgroundColor="lightgrey";
             if((headerMonth===calendarMonth)&&(headerYear===calendarYear.toString())){
@@ -225,7 +229,7 @@ function changeYearsClick(direction){
 function addRedDot(){
     let newElement=document.createElement('div');
     newElement.id="redDot";
-    newElement.style.backgroundColor="red";
+    newElement.style.backgroundColor="orangered";
     newElement.style.borderRadius="25px 25px 25px 25px";
     newElement.style.height="4px";
     newElement.style.width="4px";

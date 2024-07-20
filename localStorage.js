@@ -92,7 +92,6 @@ function retrieveComputedExpense(startDate,endDate,Category){
     clearContainer2();
     let userIndex=getUserIndex();
     Users=JSON.parse(localStorage.getItem("Users"));
-console.log("Category-> ",Category)
     let startDateObj=new Date(startDate);
     let endDateObj=new Date(endDate);
     let totalExpenseAmount=0;
@@ -128,4 +127,19 @@ function updateAlertDate(id){
             break;
         }
     }
+}
+
+
+function redDotRequired(day,currentMonth,currentYear){
+    let str=['JANUARY','FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER']
+    let currentDay=day.toString()+" "+str[currentMonth-1]+" "+currentYear.toString();
+
+    let userIndex=getUserIndex();
+    Users=JSON.parse(localStorage.getItem("Users"));
+    for (let i = 0; i < Users[userIndex].expenseData.length; i++) {
+        if (Users[userIndex].expenseData[i].expenseDate===currentDay){
+            return true;
+        }
+    }
+    return false;
 }
