@@ -29,8 +29,10 @@
     border-radius: 5px;
     background-color: red;
     color: white;
-    height: 25px;
+    height: 30px;
     width: 90px;
+    font-size: 15px;
+    font-family: Calibri;
     position: relative;
     top: 11px;
     left: calc(50% - 45px);
@@ -46,5 +48,7 @@
 @media (max-width: 600px) {
     #emailLoggedin {
         width: 85%;
+        position: absolute;
+        top: 70px;
     }
 }
