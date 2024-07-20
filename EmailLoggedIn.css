@@ -4,7 +4,7 @@
     right: 10px;
     background-color: white;
     border-radius: 10px;
-    height: 130px;
+    height: 140px;
     width: 400px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     padding: 10px;
@@ -17,7 +17,7 @@
     display: none;
 }
 #emailLoggedinDisplay{
-    margin-top: -7px;
+    margin-top: 20px;
     height: 25px;
     background-color: lightgray;
     border-radius: 4px;
@@ -29,16 +29,22 @@
     border-radius: 5px;
     background-color: red;
     color: white;
-    text-align: center;
     height: 25px;
     width: 90px;
-    padding-top: 2px;
     position: relative;
     top: 11px;
     left: calc(50% - 45px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #emailLoggedinLogout:hover{
     transform: scale(1.04);
     transition: transform 120ms ,background-color 0ms;
     cursor: pointer;
+}
+@media (max-width: 600px) {
+    #emailLoggedin {
+        width: 85%;
+    }
 }

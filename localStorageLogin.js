@@ -55,10 +55,11 @@ document.getElementById('user-interact').addEventListener("submit", function(e){
     }
     else{
         let mailId=document.getElementById("email").value;
+        let phoneNumber=document.getElementById("phoneNumber").value;
         let pass=document.getElementById("passwordField").value;
         let flag=false;
         for(let i=0;i<Users.length;i++){
-            if((Users[i].email === mailId)&&(Users[i].password===pass)){
+            if(((Users[i].email === mailId)||(Users[i].phoneNumber===phoneNumber))&&(Users[i].password===pass)){
                 updateCurrentEmail(document.getElementById("email").value);
                 window.location.href="../index.html";
                 flag=true;

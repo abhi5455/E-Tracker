@@ -177,5 +177,18 @@ personInfo.addEventListener('click',function(){
 
 //Update Logged Email
 window.addEventListener('load', function(){
+    if(JSON.parse(localStorage.getItem('currentEmail'))===null){
+        window.location.href="./Login/Login.html";
+        return;
+    }
     document.getElementById('emailLoggedinDisplay').textContent=JSON.parse(localStorage.getItem("currentEmail"));
+    let userIndex=getUserIndex();
+    Users=JSON.parse(localStorage.getItem("Users"));
+    let personName=document.getElementById('personName');
+    personName.textContent="Hi, "+Users[userIndex].name;
+})
+
+let logOut=document.getElementById('emailLoggedinLogout');
+logOut.addEventListener('click',function(){
+    window.location.href="./Login/Login.html";
 })

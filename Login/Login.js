@@ -27,8 +27,8 @@ signIn.addEventListener("click", function(){
         email.style.top="5px";
         password.style.top="25px";
         signInAlternate.style.display="block";
-        forgotPassword.style.display="block";
-        submitButton.style.top="205px";
+        //forgotPassword.style.display="block";
+        submitButton.style.top="175px";
         console.log(phoneNumberBlock.style.order);
         userInteractHeader.textContent="Resume your Tracking";
     }
@@ -56,6 +56,8 @@ signInAlternate.addEventListener("click", function(){
     if(emailLogInFlag){
         signInAlternate.textContent="Sign In using Email";
         email.style.display="none";
+        email.required=false;
+        phoneNumber.required=true;
         phoneNumberBlock.style.display="flex";
         phoneNumberBlock.style.top="-50px";
         password.style.top="70px";
@@ -70,6 +72,8 @@ signInAlternate.addEventListener("click", function(){
     else{
         signInAlternate.textContent="Sign In using Phone Number";
         email.style.display="block";
+        email.required=true;
+        phoneNumber.required=false;
         phoneNumberBlock.style.display="none";
         email.style.top="5px";
         password.style.top="25px";
