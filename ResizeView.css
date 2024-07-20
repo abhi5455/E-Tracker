@@ -70,7 +70,8 @@
     }
     #showEstimate{
         position: absolute;
-        top: 1115px;
+        top: 1210px;
+        display: block;
     }
     #infoMsg{
         position: absolute;
