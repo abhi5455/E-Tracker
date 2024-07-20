@@ -29,7 +29,6 @@ signIn.addEventListener("click", function(){
         signInAlternate.style.display="block";
         //forgotPassword.style.display="block";
         submitButton.style.top="175px";
-        console.log(phoneNumberBlock.style.order);
         userInteractHeader.textContent="Resume your Tracking";
     }
     else{
