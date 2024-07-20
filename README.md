@@ -1,4 +1,5 @@
-## EXPENSE-TRACKER: Track your Expenses with ease.
+# E-TRACKER version 1.0
+## Track your Expenses with ease.
 
 ### Features:-
   * Helps to keep track Expenses Efficiently.
