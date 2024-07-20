@@ -33,7 +33,7 @@ popupComputeButton.addEventListener('click',function(){
         to.textContent=" \u00A0 To: \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"+endDate.value;
     }
     else if(isNaN(noOfDays)){
-        noOfDays=0;
+        noOfDays=-1;
     }
     let totalExpenseAmount;
     totalExpenseAmount = retrieveComputedExpense(startDate.value,endDate.value,document.getElementById('groupName').value.trim());
