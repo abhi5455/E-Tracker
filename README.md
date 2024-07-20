@@ -5,7 +5,8 @@
   * User can add, delete and view Expenses.
   * User can also Compute expenses within specific period of time.
       * Calculate total Amount spent.
-      * Compute w.r.t added category 
+      * Compute w.r.t added category.
+  * User can also add category for easier computation.  
 ##### NOTE: The app uses Local Storage to store data.
 <br>
 
