@@ -52,6 +52,12 @@ popupComputeButton.addEventListener('click',function(){
     computePopup.style.display="none";
     searchBy.style.display="block";
     document.getElementById("searchByLabel").style.display="none";
+    if(window.matchMedia("(max-width: 690px)").matches) {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth"
+        })
+    }
 })
 
 window.addEventListener('resize',computePopupSetPos);
