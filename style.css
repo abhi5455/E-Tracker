@@ -4,6 +4,7 @@
 }
 body{
     margin: 0;
+    scroll-behavior: smooth;
 }
 *{
     scrollbar-width: none;
