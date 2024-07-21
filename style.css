@@ -149,6 +149,9 @@ header{
     background: linear-gradient(45deg,aqua, hotpink);
     height: 89vh;
     overflow-y: scroll;
+    @media(min-width: 690px) {
+        box-shadow: inset 1px -1px 20px rgba(0, 0, 0, 0.15);
+    }
 }
 .expense{
     scrollbar-color: transparent transparent;
