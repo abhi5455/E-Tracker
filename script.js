@@ -40,7 +40,9 @@ function addExpense(id,date,name,amount,groupName,description){
     newExpense.querySelector('#label2').textContent="₹"+amount;
     newExpense.querySelector('#label3').textContent=description;
     newExpense.querySelector('#label4').textContent=groupName;
-    newExpense.querySelector('#expenseFooter').textContent=date;
+    let date1=date.split(' ');
+    let date2=date1[0]+" "+date1[1].substring(0,3)+" "+date1[2];
+    newExpense.querySelector('#expenseFooter').textContent=date2;
     container2.insertBefore(newExpense,lastElement);
     let expenses=document.getElementsByClassName('expense');
     for(let i=0;i<expenses.length;i++) {
