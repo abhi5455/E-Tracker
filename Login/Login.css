@@ -285,3 +285,10 @@ input[type="password"]::-ms-reveal {
         font-size: 13px;
     }
 }
+@media (max-width: 600px) {
+    .user-interact {
+        position: absolute;
+        left: calc(50% - 328px);
+        width: 300px;
+    }
+}
